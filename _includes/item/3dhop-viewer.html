@@ -1,0 +1,44 @@
+<!--STYLESHEET-->
+<link type="text/css" rel="stylesheet" href="{{ '/assets/lib/3dhop/minimal/stylesheet/3dhop.css' | relative_url }}"/>
+<!--SPIDERGL-->
+<script type="text/javascript" src="{{ '/assets/lib/3dhop/minimal/js/spidergl.js' | relative_url }}"></script>
+<!--JQUERY-->
+<script type="text/javascript" src="{{ '/assets/lib/3dhop/minimal/js/jquery.js' | relative_url }}"></script>
+<!--PRESENTER-->
+<script type="text/javascript" src="{{ '/assets/lib/3dhop/minimal/js/presenter.js' | relative_url }}"></script>
+<!--3D MODELS LOADING AND RENDERING-->
+<script type="text/javascript" src="{{ '/assets/lib/3dhop/minimal/js/nexus.js' | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/lib/3dhop/minimal/js/ply.js' | relative_url }}"></script>
+<!--TRACKBALLS-->
+<script type="text/javascript" src="{{ '/assets/lib/3dhop/minimal/js/trackball_sphere.js' | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/lib/3dhop/minimal/js/trackball_turntable.js' | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/lib/3dhop/minimal/js/trackball_turntable_pan.js' | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/lib/3dhop/minimal/js/trackball_pantilt.js' | relative_url }}"></script>
+<!--UTILITY-->
+<script type="text/javascript" src="{{ '/assets/lib/3dhop/minimal/js/init.js' | relative_url }}"></script>
+
+<div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
+    <canvas id="draw-canvas" style="background-image: url(skins/backgrounds/light.jpg)"/>
+</div>
+<script>
+    var presenter = null;
+    
+    function setup3dhop() { 
+        presenter = new Presenter("draw-canvas");
+    
+        presenter.setScene({
+            meshes: {
+                "Point1" : { url: "{{ include.model-file }}" }
+            },
+            modelInstances : {
+                "Model1" : { mesh : "Point1" }
+            }
+        });
+    }
+    
+    $(document).ready(function(){
+        init3dhop();
+    
+        setup3dhop();
+    });
+</script>
