@@ -11,8 +11,7 @@ custom-foot: js/modal-hash-js.html
 <div class="mb-4 ">
     
     {% assign model = children | where: 'extension','obj' | first %}
-    {{ model.object_location | inspect }}
-    {% include item/threejs-viewer.html model=model.object_location texture=page.object_location %}
+    {% include item/threejs-viewer.html model=model.object_location %}
 
     <div class="my-2">
         
