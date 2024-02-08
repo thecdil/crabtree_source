@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
-<link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+<link rel="shortcut icon" type="image/x-icon" href="https://www.lib.uidaho.edu/favicon.ico">
 <!--
 
   _____     ____        __  _           ___       _ __   __       
@@ -15,14 +15,19 @@
 <meta name="generator" content="collectionbuilder-csv" />
 <meta http-equiv="Content-Language" content="en-us" >
 
-{% if site.data.theme.font-cdn %}{{ site.data.theme.font-cdn }}{%- endif -%}
-<link rel="stylesheet" href="{% if site.data.theme.bootswatch %}https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/{{ site.data.theme.bootswatch }}/bootstrap.min.css{% else %}{{ '/assets/lib/bootstrap.min.css' | relative_url }}{% endif %}" type="text/css">
-{% if page.layout == 'data' %}<link rel="stylesheet" type="text/css" href="{{ '/assets/lib/datatables/datatables.min.css' | relative_url }}">{%- endif -%}
-{% if page.layout == 'map' %}<link rel="stylesheet" href="{{ '/assets/lib/leaflet/leaflet.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/lib/leaflet/leaflet.fullscreen.css' | relative_url }}">
-{% if site.data.theme.map-search == true %}<link rel="stylesheet" href="{{ '/assets/lib/leaflet/leaflet.fusesearch.css' | relative_url }}">{%- endif -%}
-{% if site.data.theme.map-cluster == true %}<link rel="stylesheet" href="{{ '/assets/lib/leaflet/MarkerCluster.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/lib/leaflet/MarkerCluster.Default.css' | relative_url }}">{% endif %}{%- endif -%}
+{% if site.data.theme.font-cdn %}{{ site.data.theme.font-cdn }}
+{% elsif jekyll.environment == "production" %}
+<link href="https://www.lib.uidaho.edu/assets/css/uidaho-fonts.css" rel="stylesheet">
+{% else %}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+{% endif %}
+<link rel="stylesheet" href="{{ '/bootstrap5/bootstrap.min.css' | prepend: site.digital-assets }}" type="text/css">
+{% if page.layout == 'data' %}<link rel="stylesheet" type="text/css" href="{{ '/bootstrap5/datatables/datatables.min.css' | prepend: site.digital-assets }}">{%- endif -%}
+{% if page.layout == 'map' %}<link rel="stylesheet" href="{{ '/leaflet/leaflet.css' | prepend: site.digital-assets }}">
+<link rel="stylesheet" href="{{ '/leaflet/leaflet.fullscreen.css' | prepend: site.digital-assets }}">
+{% if site.data.theme.map-search == true %}<link rel="stylesheet" href="{{ '/leaflet/leaflet.fusesearch.css' | prepend: site.digital-assets }}">{%- endif -%}
+{% if site.data.theme.map-cluster == true %}<link rel="stylesheet" href="{{ '/leaflet/MarkerCluster.css' | prepend: site.digital-assets }}">
+<link rel="stylesheet" href="{{ '/leaflet/MarkerCluster.Default.css' | prepend: site.digital-assets }}">{% endif %}{%- endif -%}
 <link rel="stylesheet" href="{{ '/assets/css/cb.css' | relative_url }}" type="text/css">
 
 {% comment %} 
@@ -33,4 +38,7 @@
 {% include head/analytics.html %}
 {%- endif -%}
 {% if site.noindex == true or page.noindex == true or layout.noindex == true %}<meta name="robots" content="noindex" />{% endif %}
-<!-- Last build date: {{ site.time | date: "%Y-%m-%d" }} -->
+<!-- Last build date: {{ site.time | date: "%Y-%m-%d" }}
+base-digital-collections-template, metadata: {{ site.metadata }}
+{{ site.source-code }} 
+-->

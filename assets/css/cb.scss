@@ -6,10 +6,10 @@
 @charset "utf-8";
 
 /* base variables pulled from theme.yml */
-$base-font-family: {{ site.data.theme.base-font-family | default: '""' }};
-$base-font-size: {{ site.data.theme.base-font-size | default: '""' }};
-$text-color: {{ site.data.theme.text-color | default: '""' }};
-$link-color: {{ site.data.theme.link-color | default: '""' }};
+$base-font-family: {{ site.data.theme.base-font-family | default: "'Public Sans', sans-serif" }};
+$base-font-size: {{ site.data.theme.base-font-size | default: "1.1em" }};
+$text-color: {{ site.data.theme.text-color | default: "#111" }};
+$link-color: {{ site.data.theme.link-color | default: "#00AEC7" }};
 
 /* theme colors pulled from config-theme-colors */
 {% assign btns = site.data.config-theme-colors | where_exp: "item","item.color != nil" %}
