@@ -2,45 +2,7 @@
 
 - 3d_model
 - 3d_model_child --> this isn't actually used as a layout, the 3d_model layout pulls these items in for download
-- 3d_model_child_missing_parent --> these items have no parent record
 - crabtree_multiple --> these are multiple images of points from different angles
-
-# missing parent models
-
-32 models without a parent record:
-
-ce_ca_d1_2404_model
-ce_ca_d1_38_model
-ce_ca_d1_6557_model
-ce_ca_d2_1167_model
-ce_ca_d2_1168_model
-ce_ca_d2_1172_model
-ce_ca_d2_1176_model
-ce_ca_d2_1186_model
-ce_ca_d2_1396_model
-ce_ca_d2_1398_model
-ce_ca_d2_1399_model
-ce_ca_d2_1400_model
-ce_ca_d2_1402_model
-ce_ca_d2_1405_model
-ce_ca_d2_1406_model
-ce_ca_d2_1441_model
-ce_ca_d2_1442_model
-ce_ca_d2_1443_model
-ce_ca_d2_1444_model
-ce_ca_d2_1445_model
-ce_ca_d2_1446_model
-ce_ca_d2_1447_model
-ce_ca_d2_1449_model
-ce_ca_d2_1733_model
-ce_ca_d2_1753_model
-ce_cb_d4_8163_model
-ce_cb_d4_8591_model
-ce_cb_d4_9035_model
-ce_cb_d4_9559_model
-ce_cc_d2_905_model
-ce_cd_d2_8560_model
-ce_cd_d6_2795_model
 
 # object notes
 
@@ -52,21 +14,16 @@ objects:
 metadata:
 15251 metadata records
 -2113 publish = no records 
-13138 metadata records
+13010 metadata records
 
 27 metadata records with no matching file 
 18 id matches 'a' but no matching 'b'
 3 id matches 'b' but no matching 'a'
 13090 records with matching file 
 
-167 sets of model files (mtl, obj, stl, x3d), with 167 parentid
-135 3d_model parent records
-
-
 display_template counts:
 3d_model	135
 3d_model_child	539
-3d_model_child_missing_parent	128
 crabtree_multiple	3917
 image	5409
 multiple	1
