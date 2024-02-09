@@ -6,28 +6,46 @@
 
 # object notes
 
-objects:
-17293 files 
-- 2240 removed
-15053 files on server
+On libobjects:
+- 3012 pdf
+- 11468 .jpg
+- 14476 _sm.jpg smalls
+- 14476 _th.jpg thumbs
+- 144 .mtl
+- 144 .obj
+- 145 .stl
+- 143 .x3d
 
 metadata:
-15251 metadata records
--2113 publish = no records 
-13010 metadata records
+- 13010 metadata records
+- 2113 publish = no records 
 
-27 metadata records with no matching file 
-18 id matches 'a' but no matching 'b'
-3 id matches 'b' but no matching 'a'
-13090 records with matching file 
+extensions count in metadata:
+- jpg	9437
+- mtl	135
+- obj	135
+- pdf	3007
+- stl	135
+- x3d	134
+- (blank)	27 (rows with no matching file)
+
+problems:
+- 27 metadata records with no matching file 
+- 18 id matches 'a' but no matching 'b'
+- 3 id matches 'b' but no matching 'a'
 
 display_template counts:
-3d_model	135
-3d_model_child	539
-crabtree_multiple	3917
-image	5409
-multiple	1
-pdf	3009
+- 3d_model	135
+- 3d_model_child	539
+- crabtree_multiple	3917
+- image	5409
+- multiple	1
+- pdf	3009
+
+group counts:
+- archive 4410
+- artifact 4082
+- (blank) 4518 (child objects)
 
 # prep notes
 
@@ -39,6 +57,8 @@ CE_CB_D4_8469-b.NEF
 CE_B81_F28-Item1.jpg;CE_B81_F28-Item1.pdf
 same item exists as single jpg cover and pdf of full document
 removed single, kept pdf and updated metadata
+
+for f in *.JPG; do mv "$f" "${f%.JPG}.jpg"; done
 
 2023-10 
 
