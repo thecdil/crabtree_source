@@ -1,7 +1,8 @@
 ---
-title: Browse
+title: Browse Artifacts
 layout: browse
 permalink: /browse.html
+group: artifact
 ---
 
-## Browse Items
+## Browse Artifacts
