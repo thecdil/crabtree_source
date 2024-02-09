@@ -1,10 +1,7 @@
 ---
-# basic layout for compound object items
-# uses _includes/item/child/ includes to add multiple objects to the item page in a gallery
-# each object is represented in a modal
+# basic layout for crabtree 3d models
+# each model item has 4 child records which are links to different download formats, mtl, obj, stl, x3d
 layout: item/item-page-base
-gallery: true
-custom-foot: js/modal-hash-js.html
 ---
 {% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %}
 

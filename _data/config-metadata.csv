@@ -1,14 +1,36 @@
 field,display_name,browse_link,external_link,dc_map,schema_map
 title,Title,,,DCTERMS.title,headline
 creator,Creator,,,DCTERMS.creator,creator
-date,Date Created,,,DCTERMS.date,dateCreated
+date_archival,Archival Date,
+date_is_approximate,Date is approximate?,
+date,Date (ISO),,,DCTERMS.date,dateCreated
 description,Description,,,DCTERMS.description,description
+recipient,Recipient,
+associated_names,Associated names,
 subject,Subjects,true,,DCTERMS.subject,keywords
 location,Location,,,,contentLocation
 latitude,Latitude,,,,
 longitude,Longitude,,,,
-source,Source,,,,
+location_2,Location 2,,,,
+latitude_2,Latitude 2,,,,
+longitude_2,Longitude 2,,,,
 identifier,Source Identifier,,,,
+source,Source,,,,
+doc_length,Document Length,
+cabinet,Cabinet,
+drawer,Drawer,
+box,Box,
+bag,Bag,
+type_point,Point type,
+material,Material,
+material_source,Material source,
+length_mm,Length (mm),
+width_mm,Width (mm),
+thickness_mm,Thickness (mm),
+weight_g,Weight (g),
+count,Count,
+language,Language,
+original_format,Original format,
 type,Type,,,DCTERMS.type,
 format,Format,,,,encodingFormat
 rightsstatement,,,,DCTERMS.rights,license
