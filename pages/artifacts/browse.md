@@ -2,7 +2,7 @@
 title: Browse Artifacts
 layout: browse
 permalink: /artifacts/browse.html
-group: artifact
+metadata: crabtree_archives
 ---
 
 ## Browse Artifacts

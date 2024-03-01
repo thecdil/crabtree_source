@@ -2,7 +2,7 @@
 title: Browse Archives 
 layout: browse
 permalink: /archives/browse.html
-group: archive
+metadata: crabtree_archives
 ---
 
 ## Browse Archives Items
