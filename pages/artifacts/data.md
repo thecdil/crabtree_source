@@ -1,10 +1,10 @@
 ---
-title: Data
+title: Crabtree Artifacts Data
 layout: data
-permalink: /data.html
+permalink: /artifacts/data.html
 ---
 
-## Collection Metadata
+## Crabtree Artifacts Metadata
 
 The table below provides sorting and basic search of the collection contents. 
 Use the "CSV" button below to download the filtered metadata you see on the page. 
