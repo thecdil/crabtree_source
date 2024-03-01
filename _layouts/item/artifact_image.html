@@ -8,6 +8,12 @@ gallery: true
 
 <div class="mb-4 text-center">
 
+    <div id="{{ page.objectid }}" class="mb-4">
+        <a class="spotlight gallery-img" data-download="true" title="{{ page.title | escape }}" href="{{ page.object_location | relative_url }}">
+            <img src="{{ page.image_small | relative_url }}" alt="{{ page.image_alt_text | default: page.description | default: page.title | escape }}" class="img-fluid">
+            <div><small class="text-dark">Click to view full screen</small></div>
+        </a>
+    </div>
     {% for child in children %}
     <div id="{{ child.objectid }}" class="mb-4">
         <a class="spotlight gallery-img" data-download="true" title="{% if page.title != child.title %}{{ child.title | escape }}{% else %}{{ page.title | escape }} [{{ forloop.index }}]{% endif %}" href="{{ child.object_location | relative_url }}">
@@ -18,9 +24,8 @@ gallery: true
     {% endfor %}
 
     <div class="my-2">
-
-        {% include item/child/compound-item-download-buttons.html %}
-
+        {% if children %}{% include item/child/compound-item-download-buttons.html %}{% else %}
+        {% include item/download-buttons.html %}{% endif %}
     </div>
 
 </div>
