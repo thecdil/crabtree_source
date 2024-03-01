@@ -1,7 +1,7 @@
 ---
 title: Browse Artifacts
 layout: browse
-permalink: /browse.html
+permalink: /artifacts/browse.html
 group: artifact
 ---
 
