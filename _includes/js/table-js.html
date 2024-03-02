@@ -1,4 +1,6 @@
-{% assign fcount = site.data.config-table | size %}
+{%- assign metadata-filename = page.metadata | remove: '_test' | append: '.min.json' -%}
+{%- assign config-file = 'config-table_' | append: page.metadata | remove: '_test' -%}
+{% assign fcount = site.data[config-file] | size %}
 <!-- load DataTables with jquery bundled -->
 <script type="text/javascript" language="javascript" src="{{ '/bootstrap5/datatables/datatables.min.js' | prepend: site.digital-assets }}"></script>
 <script>
@@ -6,7 +8,7 @@
 $(document).ready( function () {
     $('#item-table').DataTable( {
         // use DataTables ajax load 
-        ajax: { url: '{{ "/assets/js/metadata.min.json" | relative_url }}', dataSrc: 'objects' },
+        ajax: { url: '{{ "/assets/js/" | relative_url }}{{ metadata-filename }}', dataSrc: 'objects' },
         // defer render to speed up large sets
         "deferRender": true,
         // enable pagination 

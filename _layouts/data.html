@@ -3,8 +3,8 @@
 layout: page
 custom-foot: js/table-js.html 
 ---
-{% assign fields = site.data.config-table | map: 'display_name' %}
-{% include data-download-modal.html %}
+{%- assign config-file = 'config-table_' | append: page.metadata | remove: '_test' -%}
+{% assign fields = site.data[config-file] | map: 'display_name' %}
 
 {{ content }}
 
