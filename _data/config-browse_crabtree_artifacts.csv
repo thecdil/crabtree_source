@@ -1,0 +1,7 @@
+field,display_name,btn,hidden,sort_name
+date,Date,,,Date
+creator,Creator,,,
+type_point,Type,true
+material,Material,true
+material_source,Material Source,true
+identifier,,,true,Identifier

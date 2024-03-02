@@ -1,5 +1,5 @@
 {%- assign items = site.data[page.metadata] | where_exp: 'item','item.objectid and item.parentid == nil' -%}
-{%- assign config-file = 'config-browse_' | append: page.metadata -%}
+{%- assign config-file = 'config-browse_' | append: page.metadata | remove: '_test' -%}
 {%- assign fields = site.data[config-file] -%}
 <script>
 
