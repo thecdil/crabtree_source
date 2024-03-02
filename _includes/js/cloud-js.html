@@ -4,11 +4,9 @@
     Requires CB's array_count_uniq.rb plugin!
 
 {%- endcomment -%}
-{% if site.data.theme.browse-child-objects == true %}
-{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
-{% else %}
-{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid and item.parentid == nil' -%}
-{% endif %}
+{%- assign page-filename = page.url | split: '/' | last -%}
+{%- assign browse-location = page.url | remove: page-filename | append: 'browse.html' | relative_url -%}
+{%- assign items = site.data[page.metadata] | where_exp: 'item','item.objectid and item.parentid == nil' -%}
 {%- assign termsMin = include.min | plus: 0 | default: 1 -%}
 {%- assign cloud_id = include.id | default: "cloud" -%}
 {%- assign cloud-fields = include.fields | split: ";" -%}
@@ -58,7 +56,7 @@
         {% if include.shuffle == true %}shuffle(array);{% endif %}
         for (i = 0; i < array.length; i++) {
             size = mapSize(array[i][1]);
-            items += '<a class="btn btn-{{ include.button | default: "outline-primary" }} m-2 tagcloud' + size + '" href="{{ "/browse.html" | relative_url }}#' + encodeURIComponent(array[i][0]) + '" >' + array[i][0] + '</a>';
+            items += '<a class="btn btn-{{ include.button | default: "outline-primary" }} m-2 tagcloud' + size + '" href="{{ browse-location }}#' + encodeURIComponent(array[i][0]) + '" >' + array[i][0] + '</a>';
         }
         cloud.innerHTML = items;
     }
