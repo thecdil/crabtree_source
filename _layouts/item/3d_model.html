@@ -4,10 +4,11 @@
 layout: item/item-page-base
 ---
 {% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %}
+{% assign obj_model = children | where: 'format','model/obj' | first %}
 
 <div class="mb-4 ">
     
-    {% include item/3d-model-viewer.html %}
+    {% include item/o3dv-embed.html model=obj_model.object_location %}
 
     <div class="my-2">
         
@@ -22,7 +23,7 @@ layout: item/item-page-base
                     Download Model File
                 </button>
                 <ul class="dropdown-menu">
-                    {% if page.object_location %}<li><a target="_blank" rel="noopener" href="{{ page.object_location | relative_url }}" class="dropdown-item">{{ page.title }} ({{ page.format | split: '/' | last | upcase }})</a></li>{% endif %}
+                    {% if page.object_location %}<li><a target="_blank" rel="noopener" href="{{ page.object_location | relative_url }}" class="dropdown-item">{{ page.title }} {% if page.format %}({{ page.format | split: '/' | last | upcase }}){% endif %}</a></li>{% endif %}
                     {% for child in children %}
                     {% unless child.object_location == nil %}
                     <li>
