@@ -1,0 +1,24 @@
+{% comment %}
+    
+    embed 3d model using Online3DViewer, https://github.com/kovacsv/Online3DViewer
+
+    E.G. --> {% include item/o3dv-embed.html model=page.object_location %}
+
+    Options:
+    - "model" = required, pass the relative or absolute link to a supported model file (formats: 3dm, 3ds, 3mf, amf, bim, brep, dae, fbx, fcstd, gltf, ifc, iges, step, stl, obj, off, ply, wrl)
+    - "height" = height of the embed in pixels (default 500px)
+    - "alt" = alternative description (default image_alt_text or title)
+
+{% endcomment %}
+<div class="online_3d_viewer w-100" style="height: {{ include.height | default: '500px' }};" model="{{ include.model | relative_url }}">
+    <div class="visually-hidden">3D model embed, {{ include.alt | default: page.image_alt_text | default: page.title }}</div>
+</div>
+<script type="text/javascript" src="{{ '/assets/lib/o3dv/o3dv.min.js' | relative_url }}"></script>
+<script>
+    window.addEventListener ('load', () => {
+        // tell the engine where to find the libs folder
+        OV.SetExternalLibLocation ('libs');
+        // init all viewers on the page
+        OV.Init3DViewerElements ();
+    });
+</script>
