@@ -1,0 +1,88 @@
+---
+# basic video item layout
+# Displays a video embedded on the page with default support for video files (using <video> element with object_location as src, MP4 is most compatible format), YouTube (from full link in object_location), or Vimeo videos (from full link in object_location).
+layout: default
+---
+<div class="container py-3">
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="text-dark" href="{{ '/' | relative_url }}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-dark" href="{{ '/perspectives.html' | relative_url }}">Perspectives</a></li>
+        <li class="breadcrumb-item active text-dark" aria-current="page">{{ page.title | truncatewords: 10 }}</li>
+    </ol>
+    <div class="my-0 h5 small">{{ page.display_template | replace: "_", " " | upcase }} {% if page.display_template == "compound_object" or page.display_template == "multiple" %}{% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %} ({{ children | size }} Items){% endif %}</div>
+    <h2 class="mb-3">{{ page.title }} 
+        {% unless page.display_template == 'record' %}<a href="#metadata" class="ms-5 btn btn-sm btn-outline-dark small">Item Info 
+            <svg class="bi icon-sprite" role="img" aria-label="Jump to Item Info">
+                <use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#arrow-down"/>
+            </svg>
+        </a>{% endunless %}
+    </h2>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+
+
+
+<div class="card mb-4 text-center">
+    <div class="card-body">
+    
+        {% if page.object_location contains 'vimeo' or page.object_location contains 'youtu' %}
+        {% include item/video-embed.html %}
+        {% else %}
+        {% include item/video-player.html %}
+        {% endif %}
+
+        <div class="mt-2">
+            
+            <div class="btn-group" role="group" aria-label="Item options">
+                {% if page.object_transcript %}<button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTranscript" aria-expanded="false" aria-controls="collapseExample">View Transcript</button>{% endif %}
+                {% if page.object_location %}<a target="_blank" rel="noopener" href="{{ page.object_location | relative_url }}" class="btn btn-outline-primary">
+                    {% if page.object_location contains 'vimeo' %}View on Vimeo{% elsif page.object_location contains 'youtu' %}View on YouTube{% elsif page.display_template == 'record'%}Link to Object{% else %}Download {{ page.format | split: '/' | last | default: page.display_template | upcase }}{% endif %}
+                </a>{% endif %}
+            </div>
+            {% if page.object_transcript %}
+            <div class="collapse mt-3" id="collapseTranscript">
+                <div class="card card-body text-start">
+                    {% assign transcript_type = page.object_transcript | slice: 0,1 %}
+                    {% if transcript_type == '/' %}
+                    {% assign transcript_location = page.object_transcript | remove_first: '/' %}
+                    {% assign transcript = site.pages | where: 'path', transcript_location | first %}
+                    {{ transcript.content | markdownify }}
+                    {% else %}
+                    {{ page.object_transcript | markdownify }}
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+           
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+
+<div class="col-12 col-md-10" id="metadata">
+
+    {% include item/metadata.html %}
+
+    {% include item/contact-btn.html %}
+    
+</div>
+
+<div class="col-md-5 py-4">
+    {% include item/citation-box.html %}
+</div>
+{% if page.rights or page.rightsstatement %}
+<div class="col-md-5 py-4">
+    {% include item/rights-box.html %}
+</div>
+{% endif %}
+</div>
+
+{%- if site.data.theme.browse-buttons == true -%}
+{% include item/browse-buttons.html %}
+{%- endif -%}
+</div>

@@ -5,6 +5,9 @@ date_archival,Archival Date,
 date_is_approximate,Date is approximate?,
 date,Date (ISO),,,DCTERMS.date,dateCreated
 description,Description,,,DCTERMS.description,description
+bio,Biography,
+interviewee,Interviewee,
+interviewer,Interviewer,
 recipient,Recipient,
 associated_names,Associated names,
 subject,Subjects,true,,DCTERMS.subject,keywords

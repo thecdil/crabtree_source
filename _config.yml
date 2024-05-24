@@ -43,6 +43,7 @@ metadata: crabtree_artifacts_test
 page_gen:
   - data: 'crabtree_artifacts_test'  
   - data: 'crabtree_archives_test'
+  - data: 'crabtree_interviews'
  
 
 ##########
