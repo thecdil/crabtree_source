@@ -1,7 +1,7 @@
 ---
 # basic layout for crabtree 3d models
 # each model item has 4 child records which are links to different download formats, mtl, obj, stl, x3d
-layout: item/item-page-base
+layout: item/artifact-page-base
 ---
 {% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %}
 {% assign obj_model = children | where: 'format','model/obj' | first %}

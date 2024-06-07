@@ -1,7 +1,7 @@
 ---
 # layout for "multiple" display template
 # creates large images with a gallery feature
-layout: item/item-page-base
+layout: item/artifact-page-base
 gallery: true
 ---
 {% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %}

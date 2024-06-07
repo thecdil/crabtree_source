@@ -1,0 +1,71 @@
+---
+# base layout for Crabtree Artifacts 
+# base layout for other item display_template layouts
+# adds breadcrumbs and title at top; citation box, rights box, and browse buttons at bottom
+layout: default
+# item-meta adds rich meta markup to the page on production build
+item-meta: true
+---
+<div class="container py-3">
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="text-dark" href="{{ '/' | relative_url }}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-dark" href="{{ '/artifacts/browse.html' | relative_url }}">Artifacts</a></li>
+        <li class="breadcrumb-item active text-dark" aria-current="page">{{ page.title | truncatewords: 10 }}</li>
+    </ol>
+    <div class="my-0 h5 small">{{ page.display_template | replace: "_", " " | upcase }} {% if page.display_template == "compound_object" or page.display_template == "multiple" %}{% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %} ({{ children | size }} Items){% endif %}</div>
+    <h2 class="mb-3">{{ page.title }} 
+        {% unless page.display_template == 'record' %}<a href="#metadata" class="ms-5 btn btn-sm btn-outline-dark small">Item Info 
+            <svg class="bi icon-sprite" role="img" aria-label="Jump to Item Info">
+                <use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#arrow-down"/>
+            </svg>
+        </a>{% endunless %}
+    </h2>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+
+        {{ content }}
+
+        </div>
+
+        <div class="col-12 col-md-10" id="metadata">
+
+            {%- assign fields = site.data.config-metadata | where_exp: 'item', 'item.display_name != nil' -%}
+            <div id="item-metadata">
+                <dl>
+                    {% for f in fields %}{% if page[f.field] %}
+                    <dt class="field">{{ f.display_name }}:</dt>
+                    <dd class="field-value">
+                        {% if f.browse_link == "true" %}
+                        {% assign topics = page[f.field] | split: ";" %}
+                        {% for t in topics %}
+                        <a class="me-3" href="{{ t | strip | url_param_escape | prepend: '/artifacts/browse.html#' | relative_url }}">{{ t | strip }}</a>
+                        {% endfor %}
+                        {% elsif f.external_link == "true" %}
+                        <a href="{{ page[f.field] }}" target="_blank" rel="noopener">{{ page[f.field] }}</a>
+                        {% else %}
+                        {{ page[f.field] | replace: '""','"' }}{% endif %}
+                    </dd>
+                    {% endif %}{% endfor %}
+                </dl>
+            </div>
+
+            {% include item/contact-btn.html %}
+            
+        </div>
+
+        <div class="col-md-5 py-4">
+            {% include item/citation-box.html %}
+        </div>
+        {% if page.rights or page.rightsstatement %}
+        <div class="col-md-5 py-4">
+            {% include item/rights-box.html %}
+        </div>
+        {% endif %}
+    </div>
+
+    {%- if site.data.theme.browse-buttons == true -%}
+        {% include item/browse-buttons.html %}
+    {%- endif -%}
+</div>
