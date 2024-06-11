@@ -11,15 +11,9 @@ Flintknapping has a complicated presence on the internet, perhaps especially for
 
 [Noel Grayson](https://thekidshouldseethis.com/post/flintknapping-cherokee-noel-grayson-video), Cherokee, is a great example of how digital storytelling can be part of culture keeping. Noel is an enrolled member of the Cherokee Nation, and was given the honorary title of Cherokee National Treasure in 1998, a special honor reserved for artisans and culture keepers. Grayson has created a number of videos showcasing his flintknapping practice, and explaining flintknapping facts and cultural contexts, like how tools will be used once they’re made.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M8lwAeBacxw?si=b2m_ZfJn520nIGVO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{% include feature/video.html objectid="https://www.youtube.com/embed/M8lwAeBacxw" caption="Grayson demonstrates flintknapping and discusses flintknapping’s history and context, especially for Cherokee people." %}
 
-*Grayson demonstrates flintknapping and discusses flintknapping’s history and context, especially for Cherokee people.*
-
-YouTube embed:
-https://www.youtube.com/watch?v=M8lwAeBacxw
-
-Other Indigenous creators are using platforms like TikTok or Instagram to showcase their flintknapping practice, as well as sharing cultural knowledges and contexts. Chumash artist [Steve Kulupeč Saffold](
-https://www.instagram.com/truetotradition/reel/C6PXIOhSUqh/), who has an instagram handle under “truetotradition”, which has almost 50k followers, is a great example.  Saffold showcases beautiful bifaces, projectile points, and other creations he makes by flintknapping and other traditional arts practices.  
+Other Indigenous creators are using platforms like TikTok or Instagram to showcase their flintknapping practice, as well as sharing cultural knowledges and contexts. Chumash artist [Steve Kulupeč Saffold](https://www.instagram.com/truetotradition/reel/C6PXIOhSUqh/), who has an instagram handle under “truetotradition”, which has almost 50k followers, is a great example. Saffold showcases beautiful bifaces, projectile points, and other creations he makes by flintknapping and other traditional arts practices.  
 
 ## Flintknapping at the University of Idaho
 
