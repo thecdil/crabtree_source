@@ -1,12 +1,20 @@
 # custom layouts
 
-- 3d_model --> parent records for 3d_model items. The model files are in child records.
+- 3d_model --> parent records for 3d_model items. The model files are in child records. 3d_model parents may also have artifact_image and image children. The layout displays the image gallery plus ability to load models.
 - 3d_model_child --> this isn't actually used as a layout, the 3d_model layout pulls these items in for download
 - artifact_image --> this layout supports single image items, or "multiple" style records with child images for multiple images of points from different angles. Importantly, these are different from standard CB multiple items, because they display and download the parent record as the first item on the page, not just the children.
+- image --> this layout is for child multiple images only
 
 # metadata notes
 
-The metadata is split into two sets: crabtree_artifacts.csv (8599 rows) and crabtree_archives.csv (4411 rows).
+The metadata is split into two sets: crabtree_artifacts.csv (6920 rows) and crabtree_archives.csv (4411 rows).
+
+Artifacts:
+
+- a batch of items marked "no" in "publish" column were originally removed (crabtree_publish_no.csv).
+- a batch of items by indigenous creators were removed.
+- after review, a batch of "no" publish items created by Crabtree were re-added to the collection (crabtree_to_be_added_2024-06-20.csv).
+- "crabtree_missing_multiple.csv" items are in the collection (except where removed for indigenous creators), but appear to be missing a related image.
 
 # object notes
 
