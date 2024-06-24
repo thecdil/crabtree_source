@@ -2,12 +2,22 @@
 # basic layout for crabtree 3d models
 # each model item has 4 child records which are links to different download formats, mtl, obj, stl, x3d
 layout: item/artifact-page-base
+gallery: true
 ---
 {% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %}
+{% assign artifact_images = children | where: 'format','image/jpeg' %}
 {% assign obj_model = children | where: 'format','model/obj' | first %}
+{% assign stl_model = children | where: 'format','model/stl' | first %}
 
-<div class="mb-4 ">
-    
+<div class="mb-4 text-center">
+    {% if artifact_images %}{% for child in artifact_images %}
+    <div id="{{ child.objectid }}" class="mb-4">
+        <a class="spotlight gallery-img" data-download="true" title="{% if page.title != child.title %}{{ child.title | escape }}{% else %}{{ page.title | escape }} [{{ forloop.index }}]{% endif %}" href="{{ child.object_location | relative_url }}">
+            <img src="{{ child.image_small | relative_url }}" alt="{{ child.image_alt_text | default: child.description | default: child.title | default: page.title | escape }}" class="img-fluid mb-2">
+        </a>
+    </div>
+    {% endfor %}{% endif %}
+
     {% include item/o3dv-embed.html model=obj_model.object_location %}
 
     <div class="my-2">
