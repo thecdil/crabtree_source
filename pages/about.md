@@ -10,7 +10,7 @@ credits: true
 
 {% include feature/jumbotron.html objectid="https://www.uidaho.edu/-/media/UIdaho-Responsive/Images/class/special-programs/anthro-lab/banners/crabtree.jpg" %} 
 
-{% include feature/nav-menu.html sections="About the Project;Donald E. Crabtree Lithic Technology Collection;Donald E. Crabtree Biography" %}
+{% include feature/nav-menu.html sections="About the Project;Project Staff;Thank You" %}
 
 ## About the Project
 
@@ -22,7 +22,7 @@ In light of knowledge, we also decided not to share any 2D images or 3D models o
 
 This website was built with assistance from the [University of Idaho’s Center for Digital Inquiry and Learning (CDIL)](https://cdil.lib.uidaho.edu/) and was generated using CollectionBuilder, an open source, minimal infrastructure platform developed by a team of librarians at the University of Idaho.
 
-### People
+### Project Staff
 
 <div class="row mt-3">
 {% for i in site.data.crabtree_people %}
@@ -36,3 +36,5 @@ This website was built with assistance from the [University of Idaho’s Center 
 </div>
 {% endfor %}
 </div>
+
+### Thank You
