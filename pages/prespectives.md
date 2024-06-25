@@ -21,7 +21,7 @@ The views and opinions expressed in these interviews are those of the participan
 <div class="col-md-6">
     <div class="card mb-3">
         <div class="card-body">
-            <h4 class="card-title"><a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}">{{ i.interviewee }}</a></h4>
+            <h4 class="card-title"><a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="text-dark">{{ i.interviewee }}</a></h4>
             <p class="card-text">{{ i.bio }}</p>
             <a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="btn btn-sm btn-outline-primary">View Interview</a>
         </div>
@@ -29,4 +29,3 @@ The views and opinions expressed in these interviews are those of the participan
 </div>
 {% endfor %}
 </div>
-
