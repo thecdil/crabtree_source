@@ -10,7 +10,7 @@ credits: true
 
 {% include feature/jumbotron.html objectid="https://www.uidaho.edu/-/media/UIdaho-Responsive/Images/class/special-programs/anthro-lab/banners/crabtree.jpg" %} 
 
-{% include feature/nav-menu.html sections="About the Project;Project Staff;Thank You" %}
+{% include feature/nav-menu.html sections="About the Project;Project Staff;Acknowledgements;Questions" %}
 
 ## About the Project
 
@@ -37,4 +37,8 @@ This website was built with assistance from the [University of Idaho’s Center 
 {% endfor %}
 </div>
 
-### Thank You
+### Acknowledgements
+
+
+### Questions?
+Please reach out to the [Alfred W. Bowers Laboratory of Anthropology](mailto:awbla@uidaho.edu) if you have any questions about this collection.
