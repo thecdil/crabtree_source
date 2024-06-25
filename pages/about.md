@@ -24,6 +24,20 @@ This website was built with assistance from the [University of Idaho’s Center 
 
 ### People
 
+<div class="row mt-3">
+{% for i in site.data.crabtree_people %}
+<div class="col-md-6">
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title">{{ i.staff }}</h4>
+            <p class="card-text">{{ i.bio }}</p>
+            <a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="btn btn-sm btn-outline-primary">View Interview</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>
+
 Leah Evans-Janke (Ph.D. Historical Archaeology; Co-principal investigator) was the Collections Manager at the Alfred W. Bowers Laboratory of Anthropology for 25 years. In this role, Evans-Janke acted as steward to 750 archaeological and historic collections; led public outreach efforts; oversaw digitization efforts; facilitated research requests; supervised lab assistants; and served as PI or co-PI on various contracts and grants.   
 
 Marco Seiferle-Valencia (Co-principal investigator) is the Open Education Librarian at the University of Idaho Library. In this role, Seiferle-Valencia collaborates with faculty to develop innovative, culturally responsive digital content. Through previous positions as the Digital Scholarship Outreach Librarian (Michigan State University) and University Library Associate (University of Michigan Libraries), Seiferle-Valencia has developed expertise in digital scholarship, digitization, culturally responsive humanities work, and photography. He is also the Technical Director and Co-Founder of the “Chicana por mi Raza Digital Memory Collective.” 
