@@ -29,6 +29,25 @@ In addition to containing the world class Crabtree Collection, the University of
 
 Want to learn more about flintknapping? Take a look at "A Quick History of Flintknapping" and "A Brief Introduction to Flintknapping," compiled by Leah Evans-Janke, Allison Fashing, and Tim Mace.
 
+<div class="row about-narrowed-content">
+<div class="col-md-6">
+    <figure class="figure mx-3">
+        <a href="{{ '/items/ce_educationalbooklet_001.html' | relative_url }}">
+            <img class="figure-img img-fluid rounded lazyload" alt="cover of A Quick History of Flintknapping" title="click to see item" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" data-src="https://objects.lib.uidaho.edu/crabtree/small/ce_educationalbooklet_001_sm.jpg" >
+        </a>
+        <figcaption class="figure-caption text-center"><a href="{{ '/items/ce_educationalbooklet_001.html' | relative_url }}">A Quick History of Flintknapping</a></figcaption>
+    </figure>
+</div>
+<div class="col-md-6">
+    <figure class="figure mx-3">
+        <a href="{{ '/items/ce_educationalbooklet_002.html' | relative_url }}">
+            <img class="figure-img img-fluid rounded lazyload" alt="cover of A Brief Introduction to Flintknapping" title="click to see item" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" data-src="https://objects.lib.uidaho.edu/crabtree/small/ce_educationalbooklet_002_sm.jpg" >
+        </a>
+        <figcaption class="figure-caption text-center"><a href="{{ '/items/ce_educationalbooklet_002.html' | relative_url }}">A Brief Introduction to Flintknapping</a></figcaption>
+    </figure>
+</div>
+</div>
+
 <!--Blurb from Leah-->
 
 Another great learning opportunity is to participate in events like the [Wanapum Heritage Center's](https://wanapum.org/) Annual Archaeology Days. Visit the [Archaeological Institute of America](https://www.archaeological.org/programs/educators/more-resources/statemonths/) to find similar events in your state.
