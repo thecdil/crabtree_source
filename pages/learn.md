@@ -23,13 +23,17 @@ Other Indigenous creators are using platforms like TikTok or Instagram to showca
 
 CB Embed of Sappington Demo Interviews
 
-In addition to containing the word class Crabtree Collection, the University of Idaho is also home to present day experts in flintknapping like our very own Professor Lee Sappington, PhD. Here is a short clip where Professor Sappington demonstrates the basics of flintknapping. Be sure to watch the in-depth videos here and here.
+In addition to containing the world class Crabtree Collection, the University of Idaho is also home to present day experts in flintknapping like our very own Professor Lee Sappington, PhD. Here is a short clip where Professor Sappington demonstrates the basics of flintknapping. Be sure to watch the in-depth videos here and here.
 
 ## Flintknapping for Kid’s and Youth 
 
-Blurb from Leah and Link to Kid’s Books
+Want to learn more about flintknapping? Take a look at "A Quick History of Flintknapping" and "A Brief Introduction to Flintknapping," compiled by Leah Evans-Janke, Allison Fashing, and Tim Mace.
 
-Mention Heritage Days and finding links to similar content in your region
+<!--Blurb from Leah-->
+
+Another great learning opportunity is to participate in events like the [Wanapum Heritage Center's](https://wanapum.org/) Annual Archaeology Days. Visit the [Archaeological Institute of America](https://www.archaeological.org/programs/educators/more-resources/statemonths/) to find similar events in your state.
+
+<!--Mention Heritage Days and finding links to similar content in your region-->
 
 ## The History of Flintknapping and Experimental Archaeology
 {:#experimental-archaeology}
