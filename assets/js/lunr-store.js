@@ -1,7 +1,7 @@
 ---
 # create lunr store for search page
 ---
-{% if jekyll.environment == "production" %}{%- assign items = site.data.crabtree_artifacts | concat: site.data.crabtree_archives | concat: site.data.crabtree_no_publish | where_exp: 'item','item.objectid and item.parentid == nil' -%}{% else %}{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid and item.parentid == nil' -%}{% endif %}
+{% if jekyll.environment == "production" %}{%- assign items = site.data.crabtree_artifacts | concat: site.data.crabtree_archives | where_exp: 'item','item.objectid and item.parentid == nil' -%}{% else %}{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid and item.parentid == nil' -%}{% endif %}
 {%- assign fields = site.data.config-search -%}
 var store = [ 
 {%- for item in items -%} 
