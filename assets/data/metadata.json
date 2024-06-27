@@ -1,7 +1,7 @@
 ---
 # metadata for json export
 ---
-{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
+{% if jekyll.environment == "production" %}{%- assign items = site.data.crabtree_artifacts | concat: site.data.crabtree_archives | concat: site.data.crabtree_no_publish | where_exp: 'item','item.objectid' -%}{% else %}{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}{% endif %}
 {%- assign fields = site.data.theme.metadata-export-fields | split: "," -%}
 { "objects": [
     {%- for item in items -%}
