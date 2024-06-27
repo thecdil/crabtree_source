@@ -1,31 +1,47 @@
 ---
-# layout for "multiple" display template
-# creates large images with a gallery feature
+# layout for artifact images, based on "multiple" display template
+# creates images in row with a gallery feature
 layout: item/artifact-page-base
 gallery: true
 ---
 {% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %}
 
-<div class="mb-4 text-center">
-
-    <div id="{{ page.objectid }}" class="mb-4">
+<div class="mb-4 row justify-content-center text-center">
+    <div id="{{ page.objectid }}" class="col-md-6 p-2">
         <a class="spotlight gallery-img" data-download="true" title="{{ page.title | escape }}" href="{{ page.object_location | relative_url }}">
-            <img src="{{ page.image_small | relative_url }}" alt="{{ page.image_alt_text | default: page.description | default: page.title | escape }}" class="img-fluid">
-            <div><small class="text-dark">Click to view full screen</small></div>
+            <img src="{{ page.image_small | relative_url }}" alt="{{ page.image_alt_text | default: page.description | default: page.title | escape }}" class="img-fluid rounded">
         </a>
     </div>
     {% for child in children %}
-    <div id="{{ child.objectid }}" class="mb-4">
+    <div id="{{ child.objectid }}" class="col-md-6 p-2">
         <a class="spotlight gallery-img" data-download="true" title="{% if page.title != child.title %}{{ child.title | escape }}{% else %}{{ page.title | escape }} [{{ forloop.index }}]{% endif %}" href="{{ child.object_location | relative_url }}">
-            <img src="{{ child.image_small | relative_url }}" alt="{{ child.image_alt_text | default: child.description | default: child.title | default: page.title | escape }}" class="img-fluid mb-2">
-            {% if page.title != child.title %}<div><small class="text-dark">{{ child.title }}</small></div>{% endif %}
+            <img src="{{ child.image_small | relative_url }}" alt="{{ child.image_alt_text | default: child.description | default: child.title | default: page.title | escape }}" class="img-fluid rounded">
         </a>
     </div>
     {% endfor %}
-
-    <div class="my-2">
-        {% if children %}{% include item/child/compound-item-download-buttons.html %}{% else %}
-        {% include item/download-buttons.html %}{% endif %}
-    </div>
-
+    <div class="col-12 text-center"><small class="text-dark">Click to view full screen</small></div>
+</div>
+<div class="mb-4">
+    {% if children %}
+    <button class="btn btn-lg btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Download Images
+    </button>
+    <ul class="dropdown-menu">
+        {% if page.object_location %}<li><a target="_blank" rel="noopener" href="{{ page.object_location | relative_url }}" class="dropdown-item">{{ page.title }} {% if page.format %}({{ page.format | split: '/' | last | upcase }}){% endif %}</a></li>{% endif %}
+        {% for child in children %}
+        {% unless child.object_location == nil %}
+        <li>
+            <a target="_blank" rel="noopener" href="{{ child.object_location | relative_url }}" class="dropdown-item">
+                {% if page.title != child.title and child.title != nil %}{{ child.title | truncatewords: 3 }}{% else %}Item {{ forloop.index }}{% endif %}
+                {% if child.format %}({{ child.format | split: '/' | last | upcase }}){% endif %}
+            </a>
+        </li>
+        {% endunless %}
+        {% endfor %}
+    </ul>
+    {% else %}
+    <a target="_blank" rel="noopener" href="{{ page.object_location | relative_url }}" class="btn btn-lg btn-outline-primary">
+        Download Image
+    </a>
+    {% endif %}
 </div>
