@@ -31,7 +31,7 @@ As this project progressed and the grant team learned more about this collection
 <div class="col-md-6">
     <div class="card mb-3">
         <div class="card-body">
-            <h4 class="card-title">{{ i.staff }}</h4>
+            <h4 class="card-title">{{ i.name }}</h4>
             <p class="card-text">{{ i.bio }}</p>
         </div>
     </div>
