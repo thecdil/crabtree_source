@@ -1,6 +1,6 @@
 ---
 title: About the Collection 
-layout: page
+layout: page-narrow
 permalink: /collection.html
 ---
 

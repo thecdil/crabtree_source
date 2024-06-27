@@ -1,6 +1,6 @@
 ---
 title: About Donald Crabtree
-layout: page
+layout: page-narrow
 permalink: /crabtree.html
 credits: true
 ---
