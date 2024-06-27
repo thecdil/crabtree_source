@@ -1,0 +1,37 @@
+<script type="text/javascript" src="{{ '/assets/lib/o3dv/o3dv.min.js' | relative_url }}"></script>
+<script>
+
+    var modelModal = document.getElementById('modelModal');
+    var viewerContainer = document.getElementById('modelContainer');
+    var o3dv;
+
+    // On modal open load model
+    modelModal.addEventListener('shown.bs.modal', event => {
+        // tell the engine where to find the libs folder
+        OV.SetExternalLibLocation ('libs');
+        // add viewer element
+        viewerContainer.innerHTML = `<div id="modelViewer" class="w-100" style="height:500px;"></div>`;
+        // viewer element 
+        var viewerDiv = document.getElementById("modelViewer");
+        // init viewer
+        o3dv = new OV.EmbeddedViewer(viewerDiv);
+        var modelOption = document.querySelector('input[name=modelOption]:checked').value;
+        o3dv.LoadModelFromUrlList([ modelOption ]);
+        
+    });
+    // On modal close stop model
+    modelModal.addEventListener('hide.bs.modal', event => {
+        o3dv.Destroy();
+        viewerContainer.innerHTML = "";
+    });
+    // Change model based on radio button
+    function changeModel() {
+        var modelOption = document.querySelector('input[name=modelOption]:checked').value;
+        o3dv.LoadModelFromUrlList([ modelOption ]);
+    }
+    var objModel = document.getElementById('objModel');
+    objModel.addEventListener('click',  changeModel);
+    var stlModel = document.getElementById('stlModel');
+    stlModel.addEventListener('click',  changeModel);
+
+</script>
