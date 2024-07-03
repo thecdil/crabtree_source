@@ -5,6 +5,7 @@ custom-foot: js/table-js.html
 ---
 {%- assign config-file = 'config-table_' | append: page.metadata | remove: '_test' -%}
 {% assign fields = site.data[config-file] | map: 'display_name' %}
+{% include crabtree-data-download.html %}
 
 {{ content }}
 

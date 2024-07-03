@@ -1,0 +1,56 @@
+{% comment %}
+    This include creates a modal pop up with data export options.
+    The logic of which formats appear is based on config-nav stubs:
+    if subject.html, map.html, location.html, or timeline.html are present, 
+    corresponding data formats will be available for download.
+{%- endcomment -%}
+
+{%- assign stubs = site.data.config-nav | map: 'stub' | join: ';' -%}
+<button type="button" class="btn btn-primary btn-lg float-md-end" data-bs-toggle="modal" data-bs-target="#dataModal">Download Complete Data</button>
+<!-- Modal -->
+<div class="modal fade" id="dataModal" tabindex="-1" role="dialog" aria-labelledby="dataModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="dataModalLabel">Complete Collection Data</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <p>Download {{ site.title }} data in a variety of reusable formats.</p>
+                
+                <div class="card my-3">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Complete Published Metadata</h2>
+                        <p class="card-text">All metadata fields for all collection items currently published on the collection website are available as a CSV spreadsheet (usable in Excel, Google Sheets, and similar programs).</p>
+                        <a href="{{ '/assets/data/crabtree_published_metadata.csv' | relative_url }}" class="btn btn-outline-dark" target="_blank">Published Metadata CSV</a>
+                    </div>
+                </div>
+                <div class="card my-3">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Complete Metadata</h2>
+                        <p class="card-text">All metadata fields for all collection items, including unpublished items, are available as a CSV spreadsheet (usable in Excel, Google Sheets, and similar programs). Please note, some items included in this data have not be published due to lack of provenance, indigenous creators, or archival restrictions.</p>
+                        <a href="{{ '/assets/data/crabtree_complete_metadata.csv' | relative_url }}" class="btn btn-outline-dark" target="_blank">Complete Metadata CSV</a>
+                    </div>
+                </div>
+                <div class="card my-3">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Collection Finding Aid</h2>
+                        <p class="card-text">Archival finding aid for the complete collection.</p>
+                        <a href="https://archiveswest.orbiscascade.org/ark:80444/xv419585" class="btn btn-outline-dark" target="_blank">Finding Aid on Archives West</a>
+                    </div>
+                </div>
+
+                <div class="card my-3">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Website Source Code</h2>
+                        <p class="card-text">GitHub repository containing source code for this project built with <a href="https://github.com/CollectionBuilder/collectionbuilder-csv" target="_blank" rel="noopener">CollectionBuilder-CSV</a>.</p>
+                        <a href="{{ site.source-code | default: 'https://github.com/CollectionBuilder/collectionbuilder-csv' }}" class="btn btn-outline-dark" target="_blank" rel="noopener">Source Code</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,8 @@
+---
+# create custom metadata csv for download
+---
+{% if jekyll.environment == "production" %}{%- assign items = site.data.crabtree_artifacts | concat: site.data.crabtree_archives | where_exp: 'item','item.objectid' -%}{% else %}{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}{% endif %}
+{%- assign fields = site.data.theme.metadata-export-fields | split: "," -%}
+{{ fields | join: "," }},object_thumb,object_location,reference_url
+{% for item in items %}{% for f in fields %}{% if item[f] %}"{{ item[f] | escape }}"{% endif %},{% endfor %}"{{ item.image_thumb }}",{% if item.object_location %}"{{ item.object_location | absolute_url }}"{% endif %},"{% unless item.publish == 'no' %}{% if item.parentid %}{{ '/items/' | append: item.parentid | append: '.html#' | append: item.objectid | absolute_url }}{% else %}{{ '/items/' | append: item.objectid | append: '.html' | absolute_url }}{% endif %}{% endunless %}"
+{% endfor %}
