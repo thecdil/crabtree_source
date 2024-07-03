@@ -62,11 +62,12 @@ custom-foot: js/3d-model-item.html
         {% unless child.object_location == nil %}
         <li>
             <a target="_blank" rel="noopener" href="{{ child.object_location | relative_url }}" class="dropdown-item">
-                {% if page.title != child.title and child.title != nil %}{{ child.title | truncatewords: 3 }}{% elsif child.extension %}{{ child.extension }}{% else %}Item {{ forloop.index }}{% endif %}
-                {% if child.format %}({{ child.format | split: '/' | last | upcase }}){% endif %}
+                {% if page.title != child.title and child.title != nil %}{{ child.title | truncatewords: 3 }}{% else %}Item {{ forloop.index }}{% endif %}
+                {{ child.format | default: child.extension | split: '/' | last | upcase }}
             </a>
         </li>
         {% endunless %}
         {% endfor %}
-    </ul>         
+    </ul>
+    <br><small>Please note: to download OBJ or MTL files right click the link and select the "Save Link As" option.</small>
 </div>
