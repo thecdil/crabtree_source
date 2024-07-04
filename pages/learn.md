@@ -6,7 +6,7 @@ permalink: /learn.html
 
 {% include feature/jumbotron.html objectid="https://www.uidaho.edu/-/media/UIdaho-Responsive/Images/class/special-programs/anthro-lab/banners/crabtree.jpg" heading="Learn More About Flintknapping" text=false %} 
 
-{% include feature/nav-menu.html sections="Native Flintknappers Online<!--;At U of I-->;Flintknapping for Kids;Experimental Archaeology;Respecting Cultural Heritage" %}
+{% include feature/nav-menu.html sections="Native Flintknappers Online;At U of I;Flintknapping for Kids;Experimental Archaeology;Respecting Cultural Heritage" %}
 
 ## Native Flintknappers Online
 
@@ -18,12 +18,14 @@ Flintknapping has a complicated presence on the internet, perhaps especially for
 
 Other Indigenous creators are using platforms like TikTok or Instagram to showcase their flintknapping practice, as well as sharing cultural knowledges and contexts. Chumash artist [Steve Kulupeč Saffold](https://www.instagram.com/truetotradition/reel/C6PXIOhSUqh/), who has an instagram handle under “truetotradition”, which has almost 50k followers, is a great example. Saffold showcases beautiful bifaces, projectile points, and other creations he makes by flintknapping and other traditional arts practices.  
 
-<!--## Flintknapping at the University of Idaho
+## Flintknapping at the University of Idaho
 {:#at-u-of-i}
 
-CB Embed of Sappington Demo Interviews
+In addition to containing the world class Crabtree Collection, the University of Idaho is also home to present day experts in flintknapping like our very own Professor Lee Sappington, PhD. Below is a short clip where Professor Sappington demonstrates the basics of flintknapping. 
 
-In addition to containing the world class Crabtree Collection, the University of Idaho is also home to present day experts in flintknapping like our very own Professor Lee Sappington, PhD. Here is a short clip where Professor Sappington demonstrates the basics of flintknapping. Be sure to watch the in-depth videos here and here.-->
+{% include feature/video.html objectid="https://youtu.be/tHS0p1GfHsY" caption="Lee Sappington Flintknapping Demonstration Part 1" %}{:.about-narrowed-content}
+
+Be sure to watch [part II of the demonstration]({{ '/items/ce_flintknappingdemo_002.html' | relative_url }}) in the collection.
 
 ## Flintknapping for Kids and Youth 
 

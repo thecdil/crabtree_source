@@ -1,6 +1,6 @@
 ---
 title: Digitization 
-layout: page
+layout: page-narrow
 permalink: /digitization.html
 ---
 
