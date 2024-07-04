@@ -2,7 +2,7 @@
 title: Artifact Categories
 layout: page
 permalink: /artifacts/cloud.html
-metadata: crabtree_artifacts_test
+metadata: crabtree_artifacts
 ---
 
 ## Browse Artifact Categories

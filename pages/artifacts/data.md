@@ -2,7 +2,7 @@
 title: Crabtree Artifacts Data
 layout: data
 permalink: /artifacts/data.html
-metadata: crabtree_artifacts_test
+metadata: crabtree_artifacts
 ---
 
 ## Crabtree Artifacts Metadata

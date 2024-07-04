@@ -2,7 +2,7 @@
 title: Timeline
 layout: timeline
 permalink: /archives/timeline.html
-metadata: crabtree_archives_test
+metadata: crabtree_archives
 ---
 
 ## Archives Collection Timeline

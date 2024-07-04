@@ -2,7 +2,7 @@
 title: Crabtree Archives Data
 layout: data
 permalink: /archives/data.html
-metadata: crabtree_archives_test
+metadata: crabtree_archives
 ---
 
 ## Crabtree Archives Metadata
