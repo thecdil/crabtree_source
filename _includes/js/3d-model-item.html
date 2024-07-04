@@ -1,3 +1,11 @@
+<script>
+    // activate popovers
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+    const popover = new bootstrap.Popover('.popover-dismiss', {
+        trigger: 'focus'
+    });
+</script>
 <script type="text/javascript" src="{{ '/assets/lib/o3dv/o3dv.min.js' | relative_url }}"></script>
 <script>
 
