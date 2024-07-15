@@ -70,6 +70,10 @@ Learning about experimental archaeology:
 - [Recreating our past: 10,000 year old mesolithic dwelling replicated by experimental archaeologists](https://www.youtube.com/watch?v=WKYPLffs748) - video.
 - [How Archaeologists Are Literally Recreating the Past, Experimental Archaeology](https://www.youtube.com/watch?v=j7767z2SuzA) - video.
 
+Ethics of experimental archaeology:
+
+- [Exploring the Ethics in Experimental Archaeology - Ep 73: Heritage Voices (4/25/2023)](https://www.archaeologypodcastnetwork.com/heritagevoices/73?rq=crabtree) - A podcast discussion with members of the project Advisory Board about the ethics of experimental archaeology and the digitization of the Crabtree Lithic Technology Collection.  
+
 ## Respecting Cultural Heritage While Flintknapping
 {:#respecting-cultural-heritage}
 
