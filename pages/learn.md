@@ -21,7 +21,7 @@ Other Indigenous creators are using platforms like TikTok or Instagram to showca
 ## Flintknapping at the University of Idaho
 {:#at-u-of-i}
 
-In addition to containing the world class Crabtree Collection, the University of Idaho is also home to present day experts in flintknapping like our very own Professor Lee Sappington, PhD. Below is a short clip where Professor Sappington demonstrates the basics of flintknapping. 
+In addition to containing the world class Crabtree Collection, the University of Idaho is also home to present day experts in flintknapping like our very own Professor Emeritus Lee Sappington, PhD. Below is a short clip where Professor Sappington demonstrates the basics of flintknapping. 
 
 {% include feature/video.html objectid="https://youtu.be/tHS0p1GfHsY" caption="Lee Sappington Flintknapping Demonstration Part 1" %}{:.about-narrowed-content}
 
