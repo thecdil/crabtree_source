@@ -7,7 +7,13 @@
 
 # metadata notes
 
-The metadata is split into two sets: crabtree_artifacts.csv (6920 rows) and crabtree_archives.csv (4411 rows).
+The metadata is split into three sets found in "_data": 
+
+- crabtree_artifacts.csv (6914 rows) items flintknapped by Crabtree or given to him, excluding unprovenanced indigenous creators. Used to generate the "Crabtree Flintknapping" section of the site.
+- crabtree_archives.csv (4411 rows) personal Crabtree archives items such as documents, letters, and slides. Used to generate the "Crabtree Archives" section of the site.
+- crabtree_no_publish.csv (3953 rows) artifact and archive items that after review were considered not suitable for publication, due to lack of provenance, sensitive content, or issues with the digitized files. These records are not directly visible on the site, but are included in data outputs for download.
+
+# object notes
 
 Artifacts:
 
@@ -15,8 +21,6 @@ Artifacts:
 - a batch of items by indigenous creators were removed.
 - after review, a batch of "no" publish items created by Crabtree were re-added to the collection (crabtree_to_be_added_2024-06-20.csv).
 - "crabtree_missing_multiple.csv" items are in the collection (except where removed for indigenous creators), but appear to be missing a related image.
-
-# object notes
 
 On libobjects:
 - 3012 pdf
