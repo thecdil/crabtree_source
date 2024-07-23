@@ -6,6 +6,7 @@ permalink: /archives/locations.html
 # leave cloud-fields as "site.data.theme.locations-fields"
 cloud-fields: location;location_2
 metadata: crabtree_archives
+cloud-min: 2
 ---
 
 ## Browse Archives Locations
