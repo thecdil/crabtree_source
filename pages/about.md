@@ -8,7 +8,7 @@ credits: true
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://www.uidaho.edu/-/media/UIdaho-Responsive/Images/class/special-programs/anthro-lab/banners/crabtree.jpg" %} 
+{% include feature/jumbotron.html objectid="https://objects.lib.uidaho.edu/crabtree/crabtree-banner.jpg" %} 
 
 {% include feature/nav-menu.html sections="About the Project;Project Staff;Acknowledgements;Questions" %}
 
