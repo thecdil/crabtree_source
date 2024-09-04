@@ -13,7 +13,7 @@ custom-foot: js/3d-model-item.html
 {% assign stl_model = children | where: 'format','model/stl' | first %}
 
 <div class="mb-4 row justify-content-center text-center">
-    {% if artifact_images %}{% for child in artifact_images %}
+    {% if artifact_images.size > 0 %}{% for child in artifact_images %}
     <div id="{{ child.objectid }}" class="col-md-6 p-2">
         <a class="spotlight gallery-img" data-download="true" title="{% if page.title != child.title %}{{ child.title | escape }}{% else %}{{ page.title | escape }} [{{ forloop.index }}]{% endif %}" href="{{ child.object_location | relative_url }}">
             <img src="{{ child.image_small | relative_url }}" alt="{{ child.image_alt_text | default: child.description | default: child.title | default: page.title | escape }}" class="img-fluid rounded">
