@@ -9,6 +9,7 @@ custom-foot: js/3d-model-item.html
 {% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %}
 {% assign artifact_images = children | where: 'format','image/jpeg' %}
 {% assign obj_model = children | where: 'format','model/obj' | first %}
+{% assign mtl_model = children | where: 'format','model/mtl' | first %}
 {% assign stl_model = children | where: 'format','model/stl' | first %}
 
 <div class="mb-4 row justify-content-center text-center">
@@ -41,7 +42,10 @@ custom-foot: js/3d-model-item.html
                     <div class="btn-group" id="modelOptionGroup" role="group" aria-label="Select 3D model type">
                         <input type="radio" class="btn-check" name="modelOption" id="objModel" autocomplete="off" value="{{ obj_model.object_location | relative_url }}" checked>
                         <label class="btn btn-outline-primary" for="objModel">OBJ Model</label>
-                        <input type="radio" class="btn-check" name="modelOption" id="stlModel" value="{{ stl_model.object_location | relative_url }}" autocomplete="off">
+                        {% if page.object_location and mtl_model %}
+                        <input type="radio" class="btn-check" name="modelOption" id="mtlModel" autocomplete="off" value="{{ obj_model.object_location | relative_url }},{{ mtl_model.object_location | relative_url }},{{ page.object_location }}">
+                        <label class="btn btn-outline-primary" for="mtlModel">OBJ + MTL Model</label>{% endif %}
+                        <input type="radio" class="btn-check" name="modelOption" id="stlModel" autocomplete="off" value="{{ stl_model.object_location | relative_url }}">
                         <label class="btn btn-outline-primary" for="stlModel">STL Model</label>
                     </div>
                 </div>

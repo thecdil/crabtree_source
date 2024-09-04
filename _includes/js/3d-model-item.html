@@ -21,8 +21,8 @@
         var viewerDiv = document.getElementById("modelViewer");
         // init viewer
         o3dv = new OV.EmbeddedViewer(viewerDiv);
-        var modelOption = document.querySelector('input[name=modelOption]:checked').value;
-        o3dv.LoadModelFromUrlList([ modelOption ]);
+        var modelOption = document.querySelector('input[name=modelOption]:checked').value.split(",");
+        o3dv.LoadModelFromUrlList(modelOption);
         
     });
     // On modal close stop model
@@ -32,11 +32,13 @@
     });
     // Change model based on radio button
     function changeModel() {
-        var modelOption = document.querySelector('input[name=modelOption]:checked').value;
-        o3dv.LoadModelFromUrlList([ modelOption ]);
+        var modelOption = document.querySelector('input[name=modelOption]:checked').value.split(",");
+        o3dv.LoadModelFromUrlList(modelOption);
     }
     var objModel = document.getElementById('objModel');
     objModel.addEventListener('click',  changeModel);
+    var mtlModel = document.getElementById('mtlModel');
+    mtlModel.addEventListener('click',  changeModel);
     var stlModel = document.getElementById('stlModel');
     stlModel.addEventListener('click',  changeModel);
 
