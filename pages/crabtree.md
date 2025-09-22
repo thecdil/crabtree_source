@@ -33,14 +33,14 @@ Crabtree was employed from 1952 until 1962 as a county supervisor for the U.S. D
 In 1958, Earl H. Swanson Jr., who established the first major archaeological program at the Idaho State University in Pocatello, Idaho, introduced himself to Crabtree after hearing from local people about the flintknapper with an amazing skill and major regional archaeological collection. Crabtree and Swanson shared a deep friendship and it lasted until Swanson's untimely death in 1975. Swanson's international credentials and participation in the "early man" network of American archaeologists gave Crabtree access to research monies and forums that he would not have entered on his own, and Swanson never hesitated to do whatever he could to provide Crabtree with that access by extension.
 
 
-{% include feature/image.html objectid="ce_b83_f3-item1-024;" %}
-{% include feature/image.html objectid="ce_b81_f17-item5;ce_b78_f1-item1-001;" %}
+{% include feature/image.html objectid="ce_b83_f3-item1-024" %}
+{% include feature/image.html objectid="ce_b81_f17-item5;ce_b78_f1-item1-001" %}
 {% include feature/image.html objectid="ce_b78_f3-item3-001" %}
-{% include feature/image.html objectid="ce_b29_f9-item2;ce_b29_f4-item8;" %}
-{% include feature/image.html objectid="ce_b81_f19-item24;ce_b81_f19-item23;" %}
-{% include feature/image.html objectid="ce_b81_f28-item19;" %}
-{% include feature/image.html objectid="ce_b81_f25-item25;ce_b81_f20-item26;" %}
-{% include feature/image.html objectid="ce_b81_f20-item24;" %}
+{% include feature/image.html objectid="ce_b29_f9-item2;ce_b29_f4-item8" %}
+{% include feature/image.html objectid="ce_b81_f19-item24;ce_b81_f19-item23" %}
+{% include feature/image.html objectid="ce_b81_f28-item19" %}
+{% include feature/image.html objectid="ce_b81_f25-item25;ce_b81_f20-item26" %}
+{% include feature/image.html objectid="ce_b81_f20-item24" %}
 
 
 
