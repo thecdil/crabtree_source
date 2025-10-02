@@ -4,7 +4,7 @@
 layout: item/artifact-page-base
 gallery: true
 ---
-{% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %}
+{% assign children = site.data.crabtree_artifacts | where_exp: 'item','item.parentid == page.objectid' %}
 
 <div class="mb-4 row justify-content-center text-center">
     <div id="{{ page.objectid }}" class="col-md-6 p-2">
