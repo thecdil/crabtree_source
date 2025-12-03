@@ -6,11 +6,11 @@ credits: true
 ---
 ## Donald E. Crabtree's Legacy and Impact
 
-This overview appears courtesy of Crabtree descendent, Julie Anderson. 
+This overview appears courtesy of Crabtree descendent, Julia Anderson. 
 
 {% include feature/image.html objectid="ce_b81_f25-item26" %}
 
-Idahaon **Donald E. Crabtree (1912-1980)** remains a central figure in the investigation of stone toolmaking by ancient people. His groundbreaking 1972 publication, ***“An Introduction to Flintworking,”***  remains a basic text in classrooms and workshops with his work cited thousands of times in archaeological literature throughout the world.  
+Idahoan **Donald E. Crabtree (1912-1980)** remains a central figure in the investigation of stone toolmaking by ancient people. His groundbreaking 1972 publication, **_“An Introduction to Flintworking,”_**  remains a basic text in classrooms and workshops with his work cited thousands of times in archaeological literature throughout the world.  
 
 {% include feature/image.html objectid="ce_731_item7" %}
 
@@ -18,7 +18,7 @@ Crabtree’s lifelong passion was the investigation of the toolmaking process, n
 
 {% include feature/image.html objectid="ce_b81_f19-item20;ce_b81_f19-item29" %}
 
-**National Science Foundation** funding and an affiliation with **Idaho State University** allowed a cadre of young Ph.D. archaeology candidates to attend **Crabtree Field Schools** held summers near his Kimberly, Idaho home from 1969 to 1975\. **Washington State University’s Lithic Technology Lab** continued the field schools into the late 1970s with Crabtree in attendance.  
+**National Science Foundation** funding and an affiliation with **Idaho State University** allowed a cadre of young Ph.D. archaeology candidates to attend **Crabtree Field Schools** held summers near his Kimberly, Idaho home from 1969 to 1975. **Washington State University’s Lithic Technology Lab** continued the field schools into the late 1970s with Crabtree in attendance.  
 
 {% include feature/image.html objectid="ce_b29_f9-item2" %}
 
@@ -39,10 +39,9 @@ Read more from current experts in archaeology on Crabtee's legacy and impact her
 
 Donald Crabtree received an **honorary doctorate from the** **University of Idaho** in 1979 for “outstanding contributions to the field of experimental archaeology.”  He died at 68 the following year.  
 
-{% include feature/image.html objectid="ce_b83_f2-item2-008" %} 
-*Crabtree receiving his honorary doctorate from the University of Idaho*
+{% include feature/image.html objectid="ce_b83_f2-item2-008" caption="Crabtree receiving his honorary doctorate from the University of Idaho."%}
 
-At his death, Crabtree gave his lithic collection along with research and correspondence to the **Alfred W. Bowers Laboratory of Anthropology at the University of Idaho.** The collection includes 3,154 stone tool replications made by Crabtree and by others as well as 4,391 archival items \-- photograph, slides, research documents and correspondence.
+At his death, Crabtree gave his lithic collection along with research and correspondence to the **Alfred W. Bowers Laboratory of Anthropology at the University of Idaho.** The collection includes 3,154 stone tool replications made by Crabtree and by others as well as 4,391 archival items--photograph, slides, research documents and correspondence.
 
 In 2021, the **University of Idaho Library and the Bowers Lab** received a $240,206 three-year grant to 3-d digitize a small subset of the massive collection, in the hopes of bringing the extraordinary creativity, talent, and history of Donald Crabtree to a broader audience.
 
@@ -77,12 +76,15 @@ Other collections of note:
 
 ### U of I Dissertations
 
-"Dr. Don E. Crabtree, as one of the pioneers of academic flintknapping, developed an experimental approach in lithic studies during 1960s and 1970s. His diverse replication studies left a great impact on the field of archaeology not only in the Pacific Northwest, but also throughout the United States, Canada, and other countries. His story outside of publications, however, has been known by a very few people. Since his life had always been intertwined with academic flintknapping, learning his life stories allows us to better understand the importance and potential of experimental approach in archaeology. With his numerous professional and personal data collection at the Alfred W. Bowers Laboratory of Anthropology, this paper revisits the life of Crabtree and explores the contributions and influences he left in the field. It intends to help lithic students and scholars appreciate what Crabtree and his hands-on method really mean to us."
-From, [Reflections in Stone Tools: A Life Story of Don E. Crabtree, by Yummi Danner](https://www.proquest.com/docview/2115845790?accountid=14551&fromopenview=true&parentSessionId=2FVPn1vl4niZ6L%2FTJw2LKt%2Fi3u%2BEA9vWjWg36ntlBcY%3D&parentSessionId=9Grsa%2B6yejmmrF5XpYdm9urTTJK%2FmUOf39n3PQQrkyI%3D&pq-origsite=gscholar&sourcetype=Dissertations%20&%20Theses)
+> "Dr. Don E. Crabtree, as one of the pioneers of academic flintknapping, developed an experimental approach in lithic studies during 1960s and 1970s. His diverse replication studies left a great impact on the field of archaeology not only in the Pacific Northwest, but also throughout the United States, Canada, and other countries. His story outside of publications, however, has been known by a very few people. Since his life had always been intertwined with academic flintknapping, learning his life stories allows us to better understand the importance and potential of experimental approach in archaeology. With his numerous professional and personal data collection at the Alfred W. Bowers Laboratory of Anthropology, this paper revisits the life of Crabtree and explores the contributions and influences he left in the field. It intends to help lithic students and scholars appreciate what Crabtree and his hands-on method really mean to us."
+
+From, [Reflections in Stone Tools: A Life Story of Don E. Crabtree, by Yummi Danner](https://verso.uidaho.edu/esploro/outputs/996636642301851)
 
 ### Crabtree Award from the Society of American Archaeologists 
 
-"The SAA presents the Crabtree Award annually to an outstanding avocational archaeologist in remembrance of the singular contributions of Don Crabtree. A highly skilled self-taught flint knapper, he brought experimental archaeology and lithic technology to prominence among archaeologists. Nominees should have made significant contributions to advance understandings of local, regional, or national archaeology through excavation, research, publication, site or collections preservation, collaboration with the professional community, and/or public outreach." [Learn more at SAA.org](https://www.saa.org/career-practice/awards/crabtree-award).
+> "The SAA presents the Crabtree Award annually to an outstanding avocational archaeologist in remembrance of the singular contributions of Don Crabtree. A highly skilled self-taught flint knapper, he brought experimental archaeology and lithic technology to prominence among archaeologists. Nominees should have made significant contributions to advance understandings of local, regional, or national archaeology through excavation, research, publication, site or collections preservation, collaboration with the professional community, and/or public outreach." 
+
+[Learn more at SAA Awards](https://www.saa.org/career-practice/awards/crabtree-award).
 
 ### Crabtree field schools information 
 
