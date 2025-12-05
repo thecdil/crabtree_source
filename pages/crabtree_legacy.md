@@ -6,7 +6,7 @@ credits: true
 ---
 ## Donald E. Crabtree's Legacy and Impact
 
-This overview appears courtesy of Crabtree descendent, Julia Anderson. 
+This overview appears courtesy of Crabtree niece, Julia Anderson. 
 
 {% include feature/image.html objectid="ce_b81_f25-item26" %}
 
