@@ -18,13 +18,11 @@ The views and opinions expressed in these interviews are those of the participan
 
 <div class="row mt-3">
 {% for i in site.data.crabtree_interviews %}
-<div class="col-md-6">
-    <div class="card mb-3">
-        <div class="card-body">
-            <h4 class="card-title"><a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="text-dark">{{ i.interviewee }}</a></h4>
-            <p class="card-text">{{ i.bio }}</p>
-            <a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="btn btn-sm btn-outline-primary">View Interview</a>
-        </div>
+<div class="col-md-6 mb-3">
+    <div class="card card-body">
+        <h4><a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="text-dark">{{ i.interviewee }}</a></h4>
+        <p><small>{{ i.bio }}</small></p>
+        <a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="btn btn-sm btn-pride-gold">View Interview</a> 
     </div>
 </div>
 {% endfor %}

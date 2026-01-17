@@ -10,7 +10,7 @@ This biography appears courtesy of the Alfred W. Bowers Laboratory of Anthropolo
 
 Crabtree was born in Heyburn, Idaho on June 8, 1912. His parents were Reverend Ellis and Mabel G. Crabtree and they lived on 140 acres in the Salmon River Valley. In 1917, the Crabtrees moved to a 10-acre plot outside of Twin Falls and established a garden and pickle business. Crabtree lived a close life to his parents and two sisters in the Twin Falls community.
 
-Don finished high school in Twin Falls in 1930 and worked for the Idaho Power Company. He then decided to move to California where he enrolled in Long Beach Junior College in the mid-1930s, intending to major in geology and paleontology. His interest in those topics and in prehistoric archaeology had developed during a childhood and youth spent exploring south-central Idaho. Crabtree tried flintknapping, but at the time, it was not his primary focus.
+Don finished high school in Twin Falls in 1931 and worked for the Idaho Power Company. He then decided to move to California where he enrolled in Long Beach Junior College in the mid-1930s, intending to major in geology and paleontology. His interest in those topics and in prehistoric archaeology had developed during a childhood and youth spent exploring south-central Idaho. Crabtree tried flintknapping, but at the time, it was not his primary focus.
 
 Crabtree was a very active person and was not happy with just studying and after one term at Long Beach Junior College, he dropped out and went the rest of the way by himself. Even though he was self-conscious about his lack of education and disliked public speeches, he was recognized internationally as one of the most thoughtful and provocative students of prehistoric technologies.
 

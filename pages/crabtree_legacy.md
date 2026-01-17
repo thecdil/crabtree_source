@@ -4,9 +4,11 @@ layout: page-narrow
 permalink: /crabtree_legacy.html
 credits: true
 ---
+
 ## Donald E. Crabtree's Legacy and Impact
 
-This overview appears courtesy of Crabtree niece, Julia Anderson. 
+_An overview by Julia L. Anderson, Donald Crabtree's niece_
+{:.mt-3 .mb-5 .ms-3}
 
 {% include feature/image.html objectid="ce_b81_f25-item26" %}
 
@@ -53,17 +55,14 @@ Crabtree has significant collections in universities around the world, with thre
 
 - [College of Southern Idaho Herrett Center](https://herrett.csi.edu/), Twin Falls, Idaho.
     - Located in Twin Falls, Idaho near his home, the Herrett Center for Arts and Science curates over 500 objects from Don Crabtree’s career. The collection predominately features tools from Mr. Crabtree’s personal flintknapping kit and examples of experimental flintknapping.
-
 - [Idaho Museum of Natural History: Crabtree Colletion](https://www.isu.edu/imnh/), Idaho State University, Pocatello, Idaho
     - The museum houses more than 1,300 objects created during Crabtree’s field schools (1969-1975) sponsored by the National Science Foundation and hosted through Idaho State University. The museum is also home to Crabtree experimentation materials and houses the originals from Crabtree/ISU filming projects.
-
-- [University of Idaho Alfred W. Bowers Laboratory of Anthropology](https://www.uidaho.edu/class/anthrolab), Moscow, Idaho.
+- [University of Idaho Alfred W. Bowers Laboratory of Anthropology](https://www.uidaho.edu/letters-arts-social-sciences/research-outreach/bowers-lab), Moscow, Idaho.
 
 Other collections of note:
 
 - [Celebration Park](https://www.canyoncounty.id.gov/project/celebration-park/), Melba, Idaho. 
     - An education-focused, hands-on park, with programming centering Crabtree's infamous heart surgeries using obsidian tools.
-
 - [Univeristy of Alberta Bryan/Gruhn Archaeology Collection](https://www.ualberta.ca/en/museums/museum-collections/archaeology-collection.html), University of Alberta, Edmonton, Alberta, Canada.
 
 ### Further Links
