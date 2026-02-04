@@ -1,0 +1,24 @@
+---
+title: About Donald Crabtree
+layout: page-narrow
+permalink: /crabtree.html
+---
+
+<h2>About Donald E. Crabtree</h2>
+
+<p>Donald Crabtree was a unique and interesting person, who's passion and self-guided, life long dedication to learning, and refining his flintworking techniques helped establish the field of experimental archaeology broadly, and flintknapping and flintworking more specifically. Despite his prominence and enduring impact, much of his personal story and biography are lesser known. Here we have curated resources about Donald Crabtree that provide further context to this collection, with the most recent and comprehensive being a new biography written by Crabtree's living descendent, his niece Julia Anderson.</p>
+
+<h3>Resources</h3>
+
+<div class="row mt-3">
+    {% for b in site.data.crabtree_about_bios %}
+    <div class="col-md-6 mb-3">
+        <div class="card card-body">
+            <h4>{{ b.title }}</h4>
+            {% if b.author %}<p class="ps-2">by {{ b.author }}</p>{% endif %}
+            <p><small>{{ b.description }}</small></p>
+            <a href="{{ b.link | relative_url }}" class="btn btn-sm btn-pride-gold stretched-link">View Article</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

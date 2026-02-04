@@ -5,3 +5,4 @@ type_point,Type,true
 material,Material,true
 material_source,Material Source,true
 identifier,,,true,Identifier
+subject,,,true

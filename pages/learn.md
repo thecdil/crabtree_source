@@ -4,7 +4,7 @@ layout: about
 permalink: /learn.html
 ---
 
-{% include feature/jumbotron.html objectid="https://www.uidaho.edu/-/media/UIdaho-Responsive/Images/class/special-programs/anthro-lab/banners/crabtree.jpg" heading="Learn More About Flintknapping" text=false %} 
+{% include feature/jumbotron.html objectid="https://objects.lib.uidaho.edu/crabtree/crabtree-banner.jpg" heading="Learn More About Flintknapping" text=false %} 
 
 {% include feature/nav-menu.html sections="Native Flintknappers Online;At U of I;Flintknapping for Kids;Experimental Archaeology;Respecting Cultural Heritage" %}
 

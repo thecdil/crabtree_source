@@ -24,9 +24,9 @@ cabinet,Cabinet,
 drawer,Drawer,
 box,Box,
 bag,Bag,
-type_point,Object type,
-material,Material,
-material_source,Material source,
+type_point,Object type,true
+material,Material,true
+material_source,Material source,true
 length_mm,Length (mm),
 width_mm,Width (mm),
 thickness_mm,Thickness (mm),
