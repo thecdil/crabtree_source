@@ -1,4 +1,4 @@
-{% comment %} 
+{% comment %} CUSTOMIZED!
 
     Featured Terms button-links.
     This include creates a card with btn links to the Browse page from a set of automatically generated or manually selected terms. Either use the "field" option to auto generate *or* the "featured" option to manually create list of terms.
@@ -28,12 +28,13 @@
 {% comment %} 
     Use termsField and termsMax to customize feature 
 {% endcomment %}
+{% if include.meta == "archives" %}{% assign items = site.data.crabtree_archives %}{% else %}{% assign items = site.data.crabtree_artifacts %}{% endif %}
 {% assign termsField = include.field | default: "subject" %}
 {% assign termsMax = include.max | default: 5 %}
 {% if site.data.theme.browse-child-objects == true %}
-{%- assign terms = site.data[site.metadata] | where_exp: 'item','item.objectid' | map: termsField | join: ";" -%}
+{%- assign terms = items | where_exp: 'item','item.objectid' | map: termsField | join: ";" -%}
 {% else %}
-{%- assign terms = site.data[site.metadata] | where_exp: 'item','item.parentid == nil' | map: termsField | join: ";" -%}
+{%- assign terms = items | where_exp: 'item','item.parentid == nil' | map: termsField | join: ";" -%}
 {%- endif -%}
 {%- assign uniqTerms = terms | downcase | split: ";" | array_count_uniq -%}
 {% capture topTerms %}
@@ -46,7 +47,7 @@
         {% if include.title %}<h2 class="card-title h5">{{ include.title }}</h2>{% endif %}
         <p class="card-text">
             {% for s in topTerms %}
-            <a class="btn btn-sm btn-{{ include.btn-color | default: 'primary' }} m-1" href="{{ s | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ s | strip }}</a>{% endfor %}
+            <a class="btn btn-sm btn-{{ include.btn-color | default: 'primary' }} m-1" href="{% if include.meta == 'archives' %}{{ '/archives/browse.html' | relative_url }}{% else %}{{ '/artifacts/browse.html' | relative_url }}{% endif %}#{{ s | strip | url_param_escape }}">{{ s | strip }}</a>{% endfor %}
         </p>
     </div>
 </div>

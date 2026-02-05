@@ -19,12 +19,14 @@
     // objectid,alt,title,text,btn,link,priority
     var featureItems = [
         {% for i in feature-items %}{% assign meta = items | where: 'objectid', i.objectid | first %}
-        {% capture object_location %}{% if meta.object_location contains 'youtu' %}{% assign youtube_id = meta.object_location | split: '/' | last %}https://www.youtube-nocookie.com/embed/{{ youtube_id }}?rel=0&modestbranding=1{% else %}{{ meta.object_location | relative_url }}{% endif %}{% endcapture %}
+        {% capture object_location %}{% if i.objectid contains '/' %}{{ i.objectid | relative_url }}{% elsif meta.object_location contains 'youtu' %}{% assign youtube_id = meta.object_location | split: '/' | last %}https://www.youtube-nocookie.com/embed/{{ youtube_id }}?rel=0&modestbranding=1{% else %}{{ meta.object_location | relative_url }}{% endif %}{% endcapture %}
         { 
             "objectid": "{{ i.objectid }}",
+            "slide": {% if i.title %}true{% else %}false{% endif %},
+            "priority": {% if i.priority %}true{% else %}false{% endif %},
             "object_location": "{{ object_location }}", 
-            "image_thumb": "{{ meta.image_thumb | relative_url }}", 
-            "image_small": "{{ meta.image_small | relative_url }}", 
+            "image_thumb": "{{ meta.image_thumb | default: object_location | relative_url }}", 
+            "image_small": "{{ meta.image_small | default: object_location | relative_url }}", 
             "display_template": "{{ meta.display_template }}",
             "alt": {{ i.alt | default: meta.description | jsonify }}, 
             "title": {{ i.title | default: meta.title | jsonify }}, 
@@ -44,19 +46,26 @@
             return 0;
         }
         // Prioritize items with priority true
-        return a.priority == "true" ? -1 : 1;
+        return a.priority == true ? -1 : 1;
     });
     
     // create feature cards
     var cards = "";
     featureItems.forEach((item) => {
+        var itemContent = '';
+        if (item.slide) { 
+            itemContent = `<div class="bg-dark bg-opacity-75 rounded my-5 mx-3 p-3">
+                                <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#featureModal" data-bs-objectid="${ item.objectid }" class="text-white stretched-link">${ item.title }</a>
+                            </div>`;
+        } else {
+            itemContent = `<a href="${ item.link }" class="stretched-link"><div class="visually-hidden">Collection item: ${ item.title }</div></a>`;
+        }
+
         var itemCard = `<div class="col">
-                <div class="card h-100 border-primary border-3 feature-card ratio ratio-1x1" style="background-image: url(${ item.image_small });">
+                <div class="card h-100 border-dark border-3 feature-card ratio ratio-1x1" style="background-image: url(${ item.image_small });">
                     <div class="card-body text-center">
                         <div class="h-100 d-flex flex-column justify-content-center">
-                            <div class="bg-dark bg-opacity-75 rounded my-5 mx-3 p-3">
-                                <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#featureModal" data-bs-objectid="${ item.objectid }" class="text-white stretched-link">${ item.title }</a>
-                            </div>
+                            ${ itemContent }
                         </div>
                     </div>
                 </div>
@@ -90,7 +99,7 @@
                 </div>
                 <p>${ record.text }</p>`;
         } else {
-            var cardBody = `<div class="row">
+            var cardBody = `<div class="row align-items-center">
                     <div class="col-md-7 mb-3 text-center">
                         <img src="${ record.image_small }" class="img-fluid img-thumbnail" alt="${ record.alt }">
                     </div>
