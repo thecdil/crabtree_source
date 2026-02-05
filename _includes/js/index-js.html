@@ -1,4 +1,4 @@
-{% assign feature-items = site.data.index-sides %}
+{% assign feature-items = site.data.index-slides %}
 {% assign items = site.data.crabtree_artifacts | concat: site.data.crabtree_interviews | concat: site.data.crabtree_archives %}
 <!-- feature modal -->
 <div class="modal fade" id="featureModal" tabindex="-1" aria-labelledby="featureModalTitle" aria-hidden="true">
@@ -51,7 +51,7 @@
     var cards = "";
     featureItems.forEach((item) => {
         var itemCard = `<div class="col">
-                <div class="card h-100 border-mhs border-3 feature-card ratio ratio-1x1" style="background-image: url(${ item.image_small });">
+                <div class="card h-100 border-primary border-3 feature-card ratio ratio-1x1" style="background-image: url(${ item.image_small });">
                     <div class="card-body text-center">
                         <div class="h-100 d-flex flex-column justify-content-center">
                             <div class="bg-dark bg-opacity-75 rounded my-5 mx-3 p-3">
@@ -96,7 +96,7 @@
                     </div>
                     <div class="col-md-5">
                         <p>${ record.text }</p>
-                        <p class="text-center"><a href="${ record.link }" class="btn btn-lg btn-mhs">${ record.btn }</a></p>
+                        <p class="text-center"><a href="${ record.link }" class="btn btn-lg btn-primary">${ record.btn }</a></p>
                     </div>
                 </div>`;
         }
