@@ -1,0 +1,54 @@
+<div class="container-fluid bg-dark px-4 pt-3">
+    <div class="row align-items-center">
+        <div id="title" class="col-md-10">
+            <h1 class="mt-2"><a class="text-white" href="{{ '/' | relative_url }}" >{{ site.title }}</a></h1>	 
+            <p class="text-white">{{ site.tagline }}</p>
+        </div>
+        <div class="col-md-2 d-none d-lg-block text-end">
+            <a class="btn btn-outline-dark" href="{{ site.organization-link }}" title="{{ site.organization-name | escape }} home" >
+                <img class="img-fluid" src="https://www.lib.uidaho.edu/media/digital/liblogo_white.png" alt="{{ site.organization-name | escape }}" >
+            </a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid px-4">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#page-nav" aria-controls="page-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        {% if site.organization-logo-nav %}<span class="d-lg-none text-end">
+            <a href="{{ site.organization-link }}" target="_blank" rel="noopener">
+                <img class="img-fluid" id="mobile-nav-image" src="{{ site.organization-logo-nav | relative_url }}" title="{{ site.organization-name }}" alt="{{ site.organization-name | escape }} home" >
+            </a>
+        </span>{% endif %}
+        
+        <div class="collapse navbar-collapse" id="page-nav">
+            <ul class="navbar-nav me-auto">
+                {%- assign navItems = site.data.config-nav | where_exp: 'item', 'item.dropdown_parent == nil' -%} 
+                {% for nav in navItems %}
+                {% if nav.stub %}
+                <li class="nav-item">
+                    <a class="nav-link{% if page.url == nav.stub %} active{% endif %}{% if forloop.first %} ps-lg-0{% endif %}" href="{{ nav.stub | relative_url }}">{{ nav.display_name }}</a>
+                </li>
+                {%- else -%}
+                <li class="nav-item dropdown">
+                    {% assign navChildren = site.data.config-nav | where_exp: 'item', 'item.dropdown_parent == nav.display_name' %}
+                    {%- assign childStubs = navChildren | map: 'stub' -%}
+                    <a class="nav-link  dropdown-toggle{% if childStubs contains page.url %} active{% endif %}" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ nav.display_name }}</a>
+                    <div class="dropdown-menu">
+                        {% for c in navChildren %}
+                        <a class="dropdown-item {% if page.url == c.stub %}active{% endif %}" href="{{ c.stub | relative_url }}">{{ c.display_name }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endif %}
+                {%- endfor -%}
+            </ul>
+            
+            {% include nav-search-lunr.html %}
+            
+        </div>
+    </div>
+</nav>
