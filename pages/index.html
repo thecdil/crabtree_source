@@ -1,0 +1,48 @@
+---
+layout: default
+title: Home
+permalink: /
+custom-foot: js/index-js.html
+---
+
+<div class="container-fluid p-3 p-lg-4 mb-5">
+    
+    <div id="feature" class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3 justify-content-center mb-5"></div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-3">
+        
+        <div class="col">
+            <div class="card mb-3">
+                <div class="card-body">
+                <h2 class="card-title h5">Collection Contents</h2>
+                <p class="card-text">
+                {% assign artifacts = site.data.crabtree_artifacts | where_exp: 'i', 'i.objectid and i.parentid == nil' | size %}
+                <a class="text-dark" href="{{ '/artifacts/browse.html' | relative_url }}">{{ artifacts }} Artifacts 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi icon-sprite text-body" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+                </svg></a>
+                <br>
+                <small>Images and 3D models of lithic artifacts collected or created by Crabtree.</small>
+                <p class="card-text">
+                {% assign archives = site.data.crabtree_archives | where_exp: 'i', 'i.objectid and i.parentid == nil' | size %}
+                <a class="text-dark" href="{{ '/archives/browse.html' | relative_url }}">{{ archives }} Archival Items <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-compound-object"/></svg></a><br>
+                <small>Digitized materials from the Crabtree archives including photographs, slides, and documents.</small>
+                </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            {% include index/featured-terms.html field="material" title="Artifact Material Types" btn-color="outline-pride-gold" max=15 %}
+
+        </div>
+
+        <div class="col">
+            {% include index/featured-terms.html meta="archives" field="subject" title="Archives Subjects" btn-color="outline-info" max=15 %}
+
+        </div>
+
+    </div>
+
+
+</div>

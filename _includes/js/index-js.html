@@ -1,0 +1,121 @@
+{% assign feature-items = site.data.index-slides %}
+{% assign items = site.data.crabtree_artifacts | concat: site.data.crabtree_interviews | concat: site.data.crabtree_archives %}
+<!-- feature modal -->
+<div class="modal fade" id="featureModal" tabindex="-1" aria-labelledby="featureModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="featureModalTitle">Feature Item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="featureModalBody" class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    /* add item data */
+    // objectid,alt,title,text,btn,link,priority
+    var featureItems = [
+        {% for i in feature-items %}{% assign meta = items | where: 'objectid', i.objectid | first %}
+        {% capture object_location %}{% if i.objectid contains '/' %}{{ i.objectid | relative_url }}{% elsif meta.object_location contains 'youtu' %}{% assign youtube_id = meta.object_location | split: '/' | last %}https://www.youtube-nocookie.com/embed/{{ youtube_id }}?rel=0&modestbranding=1{% else %}{{ meta.object_location | relative_url }}{% endif %}{% endcapture %}
+        { 
+            "objectid": "{{ i.objectid }}",
+            "slide": {% if i.title %}true{% else %}false{% endif %},
+            "priority": {% if i.priority %}true{% else %}false{% endif %},
+            "object_location": "{{ object_location }}", 
+            "image_thumb": "{{ meta.image_thumb | default: object_location | relative_url }}", 
+            "image_small": "{{ meta.image_small | default: object_location | relative_url }}", 
+            "display_template": "{{ meta.display_template }}",
+            "alt": {{ i.alt | default: meta.description | jsonify }}, 
+            "title": {{ i.title | default: meta.title | jsonify }}, 
+            "text": {{ i.text | default: meta.description | jsonify }}, 
+            "btn": {{ i.btn | default: 'View Item' | jsonify }}, 
+            "link": "{% if i.link %}{{ i.link | relative_url }}{% else %}{{ '/items/' | relative_url }}{% if meta.parentid %}{{ meta.parentid }}.html#{{ meta.objectid }}{% else %}{{ meta.objectid }}.html{% endif %}{% endif %}" 
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ];
+    
+    /* shuffle items */
+    featureItems.sort(function() { return 0.5 - Math.random() });
+    /* Sort the array, putting priority items first */
+    featureItems.sort((a, b) => {
+        // If both items have the same value, maintain original order
+        if (a.priority === b.priority) {
+            return 0;
+        }
+        // Prioritize items with priority true
+        return a.priority == true ? -1 : 1;
+    });
+    
+    // create feature cards
+    var cards = "";
+    featureItems.forEach((item) => {
+        var itemContent = '';
+        if (item.slide) { 
+            itemContent = `<div class="bg-dark bg-opacity-75 rounded my-5 mx-3 p-3">
+                                <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#featureModal" data-bs-objectid="${ item.objectid }" class="text-white stretched-link">${ item.title }</a>
+                            </div>`;
+        } else {
+            itemContent = `<a href="${ item.link }" class="stretched-link"><div class="visually-hidden">Collection item: ${ item.title }</div></a>`;
+        }
+
+        var itemCard = `<div class="col">
+                <div class="card h-100 border-dark border-3 feature-card ratio ratio-1x1" style="background-image: url(${ item.image_small });">
+                    <div class="card-body text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center">
+                            ${ itemContent }
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        cards += itemCard;
+    });
+    // add to page
+    var feature = document.getElementById("feature");
+    feature.innerHTML = cards;
+
+    // feature modal parts
+    var featureModal = document.getElementById('featureModal');
+    var modalTitle = document.getElementById('featureModalTitle');
+    var modalBody = document.getElementById('featureModalBody');
+    // On modal open load item data
+    featureModal.addEventListener('show.bs.modal', event => {
+        
+        // btn that triggered modal
+        var btnTrigger = event.relatedTarget;
+        // get item objectid
+        var itemid = btnTrigger.getAttribute('data-bs-objectid');
+        // get feature info
+        var record_index = featureItems.findIndex(item => item.objectid == itemid);
+        var record = featureItems[record_index];
+        // display title
+        modalTitle.innerHTML = record.title;
+        // display body
+        if (record.display_template == "video") {
+            var cardBody = `<div class="ratio ratio-16x9 mb-3">
+                    <iframe title="video embed ${ record.title }" src="${ record.object_location }" allowfullscreen></iframe>
+                </div>
+                <p>${ record.text }</p>`;
+        } else {
+            var cardBody = `<div class="row align-items-center">
+                    <div class="col-md-7 mb-3 text-center">
+                        <img src="${ record.image_small }" class="img-fluid img-thumbnail" alt="${ record.alt }">
+                    </div>
+                    <div class="col-md-5">
+                        <p>${ record.text }</p>
+                        <p class="text-center"><a href="${ record.link }" class="btn btn-lg btn-primary">${ record.btn }</a></p>
+                    </div>
+                </div>`;
+        }
+        modalBody.innerHTML = cardBody;
+        
+    });
+    // On modal close 
+    featureModal.addEventListener('hide.bs.modal', event => {
+        // remove content on close
+        modalBody.innerHTML = "";
+    });
+    
+</script>

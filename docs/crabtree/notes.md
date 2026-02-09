@@ -83,3 +83,14 @@ for f in *.JPG; do mv "$f" "${f%.JPG}.jpg"; done
 - deduplicated, there was 212 duplicate rows. removed 108 duplicates.
 - set up a parentid column for items that are related as a compound object. These are currently only for 3D models (each compound item has a parent with jpg image, plus children representing each 3d format option) and for points images (where an item has multiple images like -a, -b, -c, -d, etc). (note to Julia, these are marked as "crabtree_multiple" display_template and aren't compatible with default "multiple" template). There could be some additional items that are compound objects in the archival items, but there isn't a way to infer that from the identifiers as far as I could tell.
 - linked items on the server to the metadata. There is a column "matching_objects" with the filename, plus links to the server items in "object_location", "image_small", "image_thumb".  The items with "publish?" value "no", are removed from the server, so could have a matching_objects, but do not have links. The "object_comments" column notes a few special cases (such as 27 rows which do not have a matching file on the server, the 2113 that were removed from the server). 
+
+# index notes
+
+ce_cd_d4_1875-a,
+ce_b81_f33-item16,
+ce_b81_f11-item35,
+ce_cd_d1_2121_model,
+ce_b29_f9-item2,
+ce_cd_d4_1467_model,
+ce_cc_d1_2177_model,
+ce_cd_d4_3558_model,
