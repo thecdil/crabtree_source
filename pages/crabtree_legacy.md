@@ -1,8 +1,7 @@
 ---
 title: About Donald Crabtree
-layout: page-narrow
+layout: about
 permalink: /crabtree_legacy.html
-credits: true
 ---
 
 ## Donald E. Crabtree's Legacy and Impact
@@ -65,7 +64,7 @@ Other collections of note:
     - An education-focused, hands-on park, with programming centering Crabtree's infamous heart surgeries using obsidian tools.
 - [Univeristy of Alberta Bryan/Gruhn Archaeology Collection](https://www.ualberta.ca/en/museums/museum-collections/archaeology-collection.html), University of Alberta, Edmonton, Alberta, Canada.
 
-### Further Links
+## Further Links
 
 "In 'The Flintworker' Don Crabtree demonstrates the making of stone tools using the cone principle which predicts where and how stone will fracture. Originally produced as a motion picture in 1972 with National Science Foundation Grant. "One in a film series on the subject of lithic technology."
 

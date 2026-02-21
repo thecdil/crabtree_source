@@ -1,6 +1,6 @@
 ---
 title: Donald E. Crabtree (1912-1980) 
-layout: page-narrow
+layout: about
 permalink: /crabtree_anderson.html
 ---
 
@@ -13,7 +13,7 @@ _A biography by Julia L. Anderson, Donald Crabtree's niece_
 
 Mostly self-educated, Crabtree was a singular expert on the technology and science of prehistoric toolmaking, otherwise known as flintknapping. His replication research is pivotal in the study of debitage, the debris left from rock chipping. He brought stone heat treatment processes to the field of archaeology. Generations of researchers use Crabtree analytics to study rock chipping, rock quarry “workshops,” ancient trade networks and prehistoric settlements.
 
-{% include feature/image.html objectid="https://objects.lib.uidaho.edu/crabtree/images/1.png" width="75" alt="Donald Crabtree stands on a desk in a typical university lab, preparing to use his self-constructed chest crutch to punch an obsidian core" caption="Crabtree demonstrating his reinvented chest crutch method of punching blades from an obsidian core, 1966. Photo courtesy Recorder, Society of American Archaeology 1966" %}
+{% include feature/image.html objectid="https://objects.lib.uidaho.edu/crabtree/images/1.png" width="50" alt="Donald Crabtree stands on a desk in a typical university lab, preparing to use his self-constructed chest crutch to punch an obsidian core" caption="Crabtree demonstrating his reinvented chest crutch method of punching blades from an obsidian core, 1966. Photo courtesy Recorder, Society of American Archaeology 1966" %}
 
 “An *Introduction to Flintworking*” published in 1972 continues to serve as the “primary dictionary of flintknapping terms,” said Lorann Pendleton, lithic specialist emeritus, and director of the North American Archaeology Lab at the American Museum of Natural History in New York City. “Without this publication, the entire field of lithic analysis simply would not exist. RARE is the scholar who can foster an entirely new field of study. Don Crabtree did that and his work is ageless.” 
 

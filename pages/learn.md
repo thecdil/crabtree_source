@@ -2,11 +2,20 @@
 title: Learn
 layout: about
 permalink: /learn.html
+credits: false
+# featured-image value can be one objectid for a photo object in this collection, a relative path to an image in this project, or a full url to any image. If left blank, no featured image will appear at top of About page.
+about-featured-image: https://objects.lib.uidaho.edu/crabtree/crabtree-banner.jpg
+# set background-position for featured image, "center", "top", "bottom"
+position: center
+# major heading to display over featured image
+heading: Learn More About Flintknapping
+# paragraph text below heading in featured image
+sub-heading: 
+# additional padding added to the feature to increase size. Give value in em or px, e.g. "5em".
+padding: 6em
+# Edit the markdown on in this file to describe your collection
+# Look in _includes/feature for options to easily add features to the page
 ---
-
-{% include feature/jumbotron.html objectid="https://objects.lib.uidaho.edu/crabtree/crabtree-banner.jpg" heading="Learn More About Flintknapping" text=false %} 
-
-{% include feature/nav-menu.html sections="Native Flintknappers Online;At U of I;Flintknapping for Kids;Experimental Archaeology;Respecting Cultural Heritage" %}
 
 ## Native Flintknappers Online
 
@@ -19,7 +28,6 @@ Flintknapping has a complicated presence on the internet, perhaps especially for
 Other Indigenous creators are using platforms like TikTok or Instagram to showcase their flintknapping practice, as well as sharing cultural knowledges and contexts. Chumash artist [Steve Kulupeč Saffold](https://www.instagram.com/truetotradition/reel/C6PXIOhSUqh/), who has an instagram handle under “truetotradition”, which has almost 50k followers, is a great example. Saffold showcases beautiful bifaces, projectile points, and other creations he makes by flintknapping and other traditional arts practices.  
 
 ## Flintknapping at the University of Idaho
-{:#at-u-of-i}
 
 In addition to containing the world class Crabtree Collection, the University of Idaho is also home to present day experts in flintknapping like our very own Professor Emeritus Lee Sappington, PhD. Below is a short clip where Professor Sappington demonstrates the basics of flintknapping. 
 
@@ -57,7 +65,6 @@ Another great learning opportunity is to participate in events like the [Wanapum
 <!--Mention Heritage Days and finding links to similar content in your region-->
 
 ## The History of Flintknapping and Experimental Archaeology
-{:#experimental-archaeology}
 
 History of Flintknapping: 
 
@@ -75,7 +82,6 @@ Ethics of experimental archaeology:
 - [Exploring the Ethics in Experimental Archaeology - Ep 73: Heritage Voices (4/25/2023)](https://www.archaeologypodcastnetwork.com/heritagevoices/73?rq=crabtree) - A podcast discussion with members of the project Advisory Board about the ethics of experimental archaeology and the digitization of the Crabtree Lithic Technology Collection.  
 
 ## Respecting Cultural Heritage While Flintknapping
-{:#respecting-cultural-heritage}
 
 {% capture q1 %}
 Issue Editors: What do you want archaeologists and collectors to know to move collaborative practice forward? 
@@ -83,22 +89,22 @@ Issue Editors: What do you want archaeologists and collectors to know to move co
 Alan D. Kelley: Everyone collecting artifacts, whether as an archaeologist or a collector, should treat artifacts with respect as potentially sacred items. Think about why they were left behind. What were the social and political contexts during loss or that caused the artifact to be left behind? Recognize that abandonment of some stuff maybe was not the choice of the people but was forced by circumstances or pressures on them. Remember that these artifacts belonged to someone else from another time and had importance in their lives. It would be better if collectors recorded where they found things but left them alone.
 
 {% endcapture %}
-{% include feature/blockquote.html quote=q1 source="Some Indigenous Perspectives on Artifact Collecting and Archaeologist–Collector Collaboration" source-link="https://www.cambridge.org/core/journals/advances-in-archaeological-practice/article/some-indigenous-perspectives-on-artifact-collecting-and-archaeologistcollector-collaboration/67A777A3B41ACAF67152A07D874DEB26" %}
+{% include feature/blockquote.html text=q1 source="Some Indigenous Perspectives on Artifact Collecting and Archaeologist–Collector Collaboration" link="https://www.cambridge.org/core/journals/advances-in-archaeological-practice/article/some-indigenous-perspectives-on-artifact-collecting-and-archaeologistcollector-collaboration/67A777A3B41ACAF67152A07D874DEB26" %}
 
 {% capture q2 %}
 Existing federal statutes and international treaties are woefully incomplete and often ineffective at preventing the escalation of looting on Indian reservations, public or private lands, and they are completely inadequate when it comes to halting private land foraging. Diggers on private lands need only the landowner’s permission. Sacred items and even the remains of ancestors and their burial belongings continue to be sold in the “art” market, without any notification of the affected tribes. Auctioneers and traders of “antique” Indian art claim that they need tribes to furnish lists of what constitutes their sacred items. Otherwise, we are told, these dealers have no way of knowing how to make such determinations on their own. This is both specious and disingenuous. The high market value the collectors place on these items is indicative of their special attributes of spirituality. Traders cannot claim ignorance and, at the same time, benefit from the "perception" of sacredness.
 
 {% endcapture %}
-{% include feature/blockquote.html quote=q2 source="Trading in Native artifacts does real harm" source-link="https://www.hcn.org/articles/indigenous-affairs-justice-trading-in-native-artifacts-does-real-harm/" %}
+{% include feature/blockquote.html text=q2 source="Trading in Native artifacts does real harm" link="https://www.hcn.org/articles/indigenous-affairs-justice-trading-in-native-artifacts-does-real-harm/" %}
 
 {% capture q3 %}
 Finding high-quality rock for making points became an obsession, too. Over the years, I have hauled in a massive quantity of rock! There are some ethics to harvesting good flaking rock so that the archaeological record isn’t damaged or contaminated—we don’t want to create new sites. Moreover, flintknapping should never be done on or near sites. Most places with high-quality flaking stone today were also used in the past, and are covered with artifacts from the quarrying process. Collecting material people used and discarded in the past, or striking flakes into such materials, destroys the archaeological record. So, I collect in rivers and washes that have exposed new, unworked material. I test cobbles in washes or rivers that have no context, as everything is washed away when it floods.
 {% endcapture %}
-{% include feature/blockquote.html quote=q3 source="My Flintknapping Problem" source-link="https://www.archaeologysouthwest.org/2015/12/17/my-flintknapping-problem/" %}
+{% include feature/blockquote.html text=q3 source="My Flintknapping Problem" link="https://www.archaeologysouthwest.org/2015/12/17/my-flintknapping-problem/" %}
 
 {% capture q4 %}
 So... Can I Pick up the Arrowhead? 
 
 The short answer: you can pick it up, take pictures of it, and take a waypoint to share with an archaeologist, but you can’t take it home with you, especially if you’re like me and mostly hunt on state- or federally-owned lands. Rock art, whether painted or incised, should never be touched; the oils from our hands can damage the panel both instantly and over time.
 {% endcapture %}
-{% include feature/blockquote.html quote=q4 source="Archaeology Explained: Can I Pick Up that Arrowhead?" source-link="https://www.themeateater.com/conservation/anthropology/archaeology-explained-can-i-pick-up-that-arrowhead" %}
+{% include feature/blockquote.html text=q4 source="Archaeology Explained: Can I Pick Up that Arrowhead?" link="https://www.themeateater.com/conservation/anthropology/archaeology-explained-can-i-pick-up-that-arrowhead" %}

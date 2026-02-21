@@ -2,8 +2,8 @@
 title: About Donald Crabtree
 layout: page-narrow
 permalink: /crabtree_bowerslab.html
-credits: true
 ---
+
 ## Donald E. Crabtree Biography
 
 This biography appears courtesy of the Alfred W. Bowers Laboratory of Anthropology website.

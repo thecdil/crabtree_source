@@ -1,6 +1,6 @@
 ---
 title: The Donald Crabtree Collection and the University of Idaho
-layout: page-narrow
+layout: about
 permalink: /crabtree_mace.html
 ---
 

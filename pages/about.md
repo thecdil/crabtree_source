@@ -4,15 +4,21 @@ layout: about
 permalink: /about.html
 # include CollectionBuilder info at bottom
 credits: true
+# featured-image value can be one objectid for a photo object in this collection, a relative path to an image in this project, or a full url to any image. If left blank, no featured image will appear at top of About page.
+about-featured-image: https://objects.lib.uidaho.edu/crabtree/crabtree-banner.jpg
+# set background-position for featured image, "center", "top", "bottom"
+position: center
+# major heading to display over featured image
+heading: Donald E. Crabtree Lithic Technology Collection
+# paragraph text below heading in featured image
+sub-heading: 
+# additional padding added to the feature to increase size. Give value in em or px, e.g. "5em".
+padding: 6em
 # Edit the markdown on in this file to describe your collection
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://objects.lib.uidaho.edu/crabtree/crabtree-banner.jpg" %} 
-
-{% include feature/nav-menu.html sections="About the Project;Project Staff;Acknowledgements" %}
-
-## Donald E. Crabtree Lithic Technology Collection
+## About the Collection
 
 The Crabtree Lithic Technology Collection, held by the [Alfred W. Bowers Laboratory of Anthropology](https://www.uidaho.edu/letters-arts-social-sciences/research-outreach/bowers-lab), is an experimental archaeology collection including approximately 8,000 stone tools and flintknapping samples created by Donald Crabtree, a pioneering lithic technologist. It is complemented by his personal library, research notes, documents, slides, and photographic records, comprising the most complete collection of his work. The collection also includes unprovenanced lithic artifacts created by Native and Indigenous people, artifacts which Crabtree surface collected or which were given to him by others. 
 
