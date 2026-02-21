@@ -11,7 +11,7 @@ interviewer,Interviewer,
 recipient,Recipient,
 associated_names,Associated names,
 subject,Subjects,true,,DCTERMS.subject,keywords
-location,Location,,,,contentLocation
+location,Location,,,DCTERMS.coverage,contentLocation
 latitude,Latitude,,,,
 longitude,Longitude,,,,
 location_2,Location 2,,,,

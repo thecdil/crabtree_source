@@ -2,7 +2,7 @@
 {%- assign config-file = 'config-table_' | append: page.metadata | remove: '_test' -%}
 {% assign fcount = site.data[config-file] | size %}
 <!-- load DataTables with jquery bundled -->
-<script type="text/javascript" language="javascript" src="{{ '/bootstrap5/datatables/datatables.min.js' | prepend: site.digital-assets }}"></script>
+<script type="text/javascript" language="javascript" src="{{ site.lib-assets | default: '/assets/lib' | relative_url }}/datatables/datatables.min.js"></script>
 <script>
 /* use jquery to initialize DataTables and load collection data */
 $(document).ready( function () {
