@@ -1,6 +1,6 @@
 ---
 title: Native Perspectives on Flintknapping
-layout: page
+layout: about
 permalink: /perspectives.html
 ---
 
@@ -14,16 +14,12 @@ On the following pages, you’ll be able to access each of our seven interviews 
 
 The views and opinions expressed in these interviews are those of the participants and do not necessarily reflect the views or opinions of others involved or any entities that they are part of. The participants’ views and opinions are based on their own personal and professional perspectives and expertise at the time of recording.
 
-### Advisory Board Interviews
+## Advisory Board Interviews
 
-<div class="row mt-3">
 {% for i in site.data.crabtree_interviews %}
-<div class="col-md-6 mb-3">
-    <div class="card card-body">
-        <h4><a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="text-dark">{{ i.interviewee }}</a></h4>
-        <p><small>{{ i.bio }}</small></p>
-        <a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="btn btn-sm btn-pride-gold">View Interview</a> 
-    </div>
+<div class="card card-body mb-3 narrow-content">
+    <h3 id="{{ i.objectid }}"><a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="text-dark">{{ i.interviewee }}</a></h3>
+    <p><small>{{ i.bio }}</small></p>
+    <a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="btn btn-sm btn-pride-gold">View Interview</a> 
 </div>
 {% endfor %}
-</div>
