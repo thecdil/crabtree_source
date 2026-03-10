@@ -17,6 +17,9 @@ The metadata is split into three sets found in "_data":
 
 - crabtree_archives_removed.csv contains items that were removed after review at request of collaborators
 
+temporary feedback form: 
+https://uidaho.co1.qualtrics.com/jfe/form/SV_0xG2Tg6qzUM1qyW
+
 # object notes
 
 Artifacts:
