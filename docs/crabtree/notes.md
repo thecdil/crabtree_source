@@ -13,6 +13,10 @@ The metadata is split into three sets found in "_data":
 - crabtree_archives.csv (4411 rows) personal Crabtree archives items such as documents, letters, and slides. Used to generate the "Crabtree Archives" section of the site.
 - crabtree_no_publish.csv (3953 rows) artifact and archive items that after review were considered not suitable for publication, due to lack of provenance, sensitive content, or issues with the digitized files. These records are not directly visible on the site, but are included in data outputs for download.
 
+2025/26 metadata has been enhanced by feedback from Julia L. Anderson.
+
+- crabtree_archives_removed.csv contains items that were removed after review at request of collaborators
+
 # object notes
 
 Artifacts:
