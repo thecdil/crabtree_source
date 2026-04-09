@@ -12,6 +12,7 @@ recipient,Recipient,
 associated_names,Associated names,
 subject,Subjects,true,,DCTERMS.subject,keywords
 location,Location,,,DCTERMS.coverage,contentLocation
+idaho_county,Idaho County,true,,,
 latitude,Latitude,,,,
 longitude,Longitude,,,,
 location_2,Location 2,,,,
