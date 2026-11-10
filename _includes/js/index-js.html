@@ -86,8 +86,33 @@
         var record = featureItems[record_index];
         // display title
         modalTitle.innerHTML = record.slide ? record.slide : record.title;
+        // welcome slide (banner image from external url) gets its own layout
+        var isWelcome = record.objectid.includes('/');
+        featureModal.classList.toggle('modal-welcome', isWelcome);
         // display body
-        if (record.display_template == "video") {
+        if (isWelcome) {
+            var tmp = document.createElement('div');
+            tmp.innerHTML = '<p>' + record.text + '</p>';
+            var paras = Array.from(tmp.children).map(p => p.outerHTML);
+            var lead = paras.shift();
+            var cardBody = `<div class="welcome-hero" style="background-image: url(${ record.image_small });" role="img" aria-label="${ record.alt }">
+                    <div class="welcome-hero-overlay">
+                        <p class="welcome-eyebrow mb-1">University of Idaho Library</p>
+                        <h2 class="welcome-title mb-0">${ record.slide }</h2>
+                    </div>
+                </div>
+                <div class="welcome-content px-3 px-md-5 py-4">
+                    <div class="welcome-lead mb-4">${ lead }</div>
+                    <div class="row g-4 mb-4">
+                        ${ paras.map(p => `<div class="col-md-6">${ p }</div>`).join('') }
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-center gap-2 pt-3 border-top">
+                        <a href="${ record.link }" class="btn btn-lg btn-primary">${ record.btn }</a>
+                        <a href="{{ '/artifacts/browse.html' | relative_url }}" class="btn btn-lg btn-outline-primary">Browse Artifacts</a>
+                        <a href="{{ '/archives/browse.html' | relative_url }}" class="btn btn-lg btn-outline-primary">Browse Archives</a>
+                    </div>
+                </div>`;
+        } else if (record.display_template == "video") {
             var cardBody = `<div class="ratio ratio-16x9 mb-3">
                     <iframe title="video embed ${ record.slide ? record.slide : record.title }" src="${ record.object_location }" allowfullscreen></iframe>
                 </div>

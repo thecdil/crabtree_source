@@ -25,7 +25,7 @@ Despite his prominence and enduring impact to flintknapping and experimental arc
             <h4>{{ b.title }}</h4>
             {% if b.author %}<p class="ps-2">by {{ b.author }}</p>{% endif %}
             <p><small>{{ b.description }}</small></p>
-            <a href="{{ b.link | relative_url }}" class="btn btn-sm btn-pride-gold stretched-link">View Article</a>
+            <a href="{{ b.link | relative_url }}" class="btn btn-sm btn-pride-gold stretched-link">{{ b.button | default: "View Article" }}</a>
         </div>
     </div>
     {% endfor %}

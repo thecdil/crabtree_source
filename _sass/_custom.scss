@@ -27,3 +27,74 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+// welcome modal
+.modal-welcome {
+    .modal-header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        border: 0;
+        padding: .75rem;
+    }
+    // title lives in the hero; keep it for screen readers
+    .modal-title {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+    }
+    .btn-close {
+        background-color: #fff;
+        border-radius: 50%;
+        padding: .6rem;
+        opacity: .9;
+    }
+    .modal-body {
+        padding: 0;
+    }
+    .modal-content {
+        overflow: hidden;
+    }
+    .welcome-hero {
+        min-height: 18rem;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+    }
+    .welcome-hero-overlay {
+        width: 100%;
+        padding: 3rem 1.5rem 1.5rem;
+        color: #fff;
+        background: linear-gradient(to top, rgba(25, 25, 25, .92) 0%, rgba(25, 25, 25, .6) 55%, rgba(25, 25, 25, 0) 100%);
+        @media (min-width: 768px) {
+            padding: 4rem 3rem 2rem;
+        }
+    }
+    .welcome-eyebrow {
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        font-size: .8rem;
+        color: #F1B300;
+        font-weight: 600;
+    }
+    .welcome-title {
+        font-size: calc(1.4rem + 1.2vw);
+        line-height: 1.2;
+        @media (min-width: 1200px) {
+            font-size: 2.4rem;
+        }
+    }
+    .welcome-lead p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+    .welcome-content p:last-child {
+        margin-bottom: 0;
+    }
+}
